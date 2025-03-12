@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pedido Realizado</title>
+  </head>
+  <body
+    style="
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+    "
+  >
+    <table
+      width="100%"
+      border="0"
+      cellpadding="0"
+      cellspacing="0"
+      style="background-color: #fcfaf5"
+    >
+      <tr>
+        <td align="center" style="width: 145px">
+          <table
+            width="700"
+            border="0"
+            cellpadding="0"
+            cellspacing="0"
+            style="background-color: #fcfaf5; padding: 20px 0"
+          >
+            <!-- Header -->
+            <tr>
+              <td align="center" style="background-color: #fff">
+                <h1
+                  style="
+                    margin: 0;
+                    font-size: 10px;
+                    color: #888888;
+                    padding-top: 15px;
+                  "
+                >
+                  Para visualizar este e-mail no navegador,
+                  <a href="" style="color: #888888">clique aqui.</a>
+                </h1>
+                <img
+                  src="https://hopelingerie.vtexassets.com/assets/vtex.file-manager-graphql/images/2db0b013-05d1-4914-8f76-800b23487722___86ce0a95c01b0357504e2cf9a3d03bd1.png"
+                  alt=""
+                  style="padding: 30px 0"
+                />
+              </td>
+            </tr>
+            <!-- Texto de confirmação de pedido -->
+            <tr>
+              <td
+                align="center"
+                style="padding: 20px 0; font-size: 18px; color: #333333"
+              >
+                Olá, Samara. Recebemos seu pedido <br />
+                <strong style="font-size: 20px; color: #000"
+                  >v1795977hope-01</strong
+                >
+              </td>
+            </tr>
+            <!-- Barra de status do pedido -->
+            <tr>
+              <td align="center" style="padding: 20px 0">
+                <img
+                  src="https://hopelingerie.vtexassets.com/assets/vtex.file-manager-graphql/images/7fa8634a-37ec-4e41-a43d-f9403b7a41ea___b93e65f4272e695e38f22f0cf8d5f601.png"
+                  alt="Status do pedido"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td align="center" style="padding-bottom: 20px">
+                <p>
+                  Agradecemos a preferência!<br />Em breve você receberá
+                  atualizações por e-mail.
+                </p>
+              </td>
+            </tr>
+            <!-- Resumo do pedido -->
+            <tr>
+              <td style="padding: 20px; text-align: center; font-size: 16px">
+                <p
+                  style="
+                    font-weight: bold;
+                    font-size: 18px;
+                    margin-bottom: 15px;
+                  "
+                >
+                  Resumo do seu pedido
+                </p>
+                <table
+                  width="100%"
+                  border="0"
+                  cellpadding="10"
+                  cellspacing="0"
+                  style="border-collapse: separate; border-spacing: 10px"
+                >
+                  <tr>
+                    <td
+                      style="
+                        width: 50%;
+                        vertical-align: top;
+                        border: 1px solid #d3c9c0;
+                        border-radius: 15px;
+                        padding: 15px;
+                      "
+                    >
+                      <h3
+                        style="
+                          margin: 0;
+                          font-size: 15px;
+                          font-weight: bold;
+                          text-align: center;
+                        "
+                      >
+                        Endereço de entrega
+                      </h3>
+                      <p
+                        style="
+                          margin: 5px 0;
+                          font-size: 12px;
+                          text-align: center;
+                        "
+                      >
+                        Avenida Doutor Hélio Ribeiro 525, Sala 02 Alvorada<br />
+                        Cuiabá - MT<br />
+                        78048-848<br />
+                        Brasil
+                      </p>
+                    </td>
+                    <td
+                      style="
+                        width: 50%;
+                        vertical-align: top;
+                        border: 1px solid #d3c9c0;
+                        border-radius: 15px;
+                        padding: 15px;
+                      "
+                    >
+                      <h3
+                        style="
+                          margin: 0;
+                          font-size: 15px;
+                          font-weight: bold;
+                          text-align: center;
+                        "
+                      >
+                        Forma de pagamento
+                      </h3>
+                      <p
+                        style="
+                          margin: 5px 0;
+                          font-size: 12px;
+                          text-align: center;
+                        "
+                      >
+                        Cartão de Crédito<br />
+                        com final 0487<br />
+                        R$ 100,03 (1x)
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- Produtos do pedido -->
+            <tr>
+              <td style="padding: 20px">
+                <table
+                  width="100%"
+                  border="0"
+                  cellpadding="10"
+                  cellspacing="0"
+                  style="
+                    border: 1px solid #d3c9c0;
+                    border-radius: 15px;
+                    border-spacing: 10px;
+                  "
+                >
+                  <tr>
+                    <td style="width: 80px; vertical-align: top">
+                      <img
+                        src="https://hopelingerie.vtexassets.com/assets/vtex.file-manager-graphql/images/b26c2826-477e-48ba-bb65-caa921e85396___e308911813f9b4feac6c90229ffb960e.png"
+                        alt="Produto 1"
+                        style="border-radius: 8px; display: block"
+                      />
+                    </td>
+                    <td style="vertical-align: top">
+                      <strong
+                        style="
+                          font-size: 14px;
+                          display: block;
+                          margin-bottom: 5px;
+                        "
+                        >Body Regata Em Microfibra Canelada Free Preto</strong
+                      >
+                      <span style="font-size: 14px; font-weight: bold"
+                        >R$ 198,90</span
+                      ><br />
+                      <span style="font-size: 12px"
+                        >Tamanho: 42 - 1 unidade</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="width: 80px; vertical-align: top">
+                      <img
+                        src="https://hopelingerie.vtexassets.com/assets/vtex.file-manager-graphql/images/b26c2826-477e-48ba-bb65-caa921e85396___e308911813f9b4feac6c90229ffb960e.png"
+                        alt="Produto 2"
+                        style="border-radius: 8px; display: block"
+                      />
+                    </td>
+                    <td style="vertical-align: top">
+                      <strong
+                        style="
+                          font-size: 14px;
+                          display: block;
+                          margin-bottom: 5px;
+                        "
+                        >Blusa Manga Longa Em Tule Personalizado Preto</strong
+                      >
+                      <span style="font-size: 14px; font-weight: bold"
+                        >R$ 198,90</span
+                      ><br />
+                      <span style="font-size: 12px"
+                        >Tamanho: M - 3 unidades</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      colspan="2"
+                      style="text-align: center; padding-top: 10px"
+                    >
+                      <img
+                        src="https://cdn-icons-png.flaticon.com/512/709/709699.png"
+                        alt="Embalagem de presente"
+                        width="16"
+                        style="vertical-align: middle"
+                      />
+                      <span style="font-size: 12px; margin-left: 5px"
+                        >Embalagem para presente adicionado</span
+                      >
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td align="center">
+                <table
+                  role="presentation"
+                  width="100%"
+                  style="
+                    max-width: 400px;
+                    border-collapse: collapse;
+                    margin: auto;
+                  "
+                >
+                  <tr
+                    style="
+                      border-bottom: 1px solid #d3c9c0;
+                      padding-bottom: 5px;
+                    "
+                  >
+                    <td align="left" style="padding: 8px">Subtotal</td>
+                    <td align="right">R$ 200,00</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid #d3c9c0">
+                    <td align="left" style="padding: 8px">Descontos</td>
+                    <td align="right">-R$ 50,00</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid #d3c9c0">
+                    <td align="left" style="padding: 8px">Entrega</td>
+                    <td align="right">R$ 12,10</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid #d3c9c0">
+                    <td align="left" style="font-weight: bold; padding: 8px">
+                      Total
+                    </td>
+                    <td align="right" style="font-weight: bold">R$ 150,20</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td align="center">
+                <table
+                  role="presentation"
+                  width="100%"
+                  align="center"
+                  style="
+                    max-width: 536px;
+                    background-color: #d2c9c0;
+                    border-radius: 8px;
+                    padding: 15px;
+                    margin: 20px auto;
+                  "
+                >
+                  <tr>
+                    <td align="center">
+                      <img
+                        src="https://hopelingerie.vtexassets.com/assets/vtex.file-manager-graphql/images/cabb9cbe-44b3-4584-aba8-595d130b6851___22ff4c070e41ad86dfc895df5b63f4c6.png"
+                        alt=""
+                        style="
+                          max-width: 50px;
+                          display: block;
+                          margin: 0 auto 10px;
+                        "
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      align="center"
+                      style="font-size: 18px; font-weight: bold"
+                    >
+                      Você ganhou 15% de cashback!
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      align="center"
+                      style="font-size: 14px; padding: 10px 15px"
+                    >
+                      Disponível para ser usado na sua próxima compra.<br />
+                      Te enviaremos um SMS com todas as informações<br />
+                      sobre como resgatar. Aproveite!
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="center">
+                      <a
+                        href="#"
+                        style="
+                          color: #000;
+                          text-decoration: underline;
+                          font-size: 14px;
+                        "
+                        >Confira as regras</a
+                      >
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- Categorias principais -->
+            <tr>
+              <td align="center" style="padding: 20px">
+                <h2 style="margin: 10px 0; font-size: 16px">
+                  COMPRE AGORA NAS PRINCIPAIS CATEGORIAS
+                </h2>
+                <table border="0" cellpadding="10" cellspacing="0" width="100%">
+                  <tr>
+                    <td align="center">
+                      <a
+                        href="#"
+                        style="
+                          display: inline-block;
+                          font-size: 13.5px;
+                          width: 279px;
+                          background-color: #000;
+                          color: #fff;
+                          padding: 15px 0;
+                          border-radius: 5px;
+                          text-decoration: none;
+                          font-weight: 600;
+                          letter-spacing: 1px;
+                        "
+                        >CALCINHAS</a
+                      >
+                    </td>
+                    <td align="center">
+                      <a
+                        href="#"
+                        style="
+                          display: inline-block;
+                          font-size: 13.5px;
+                          width: 279px;
+                          background-color: #000;
+                          color: #fff;
+                          padding: 15px 0;
+                          border-radius: 5px;
+                          text-decoration: none;
+                          font-weight: 600;
+                          letter-spacing: 1px;
+                        "
+                        >SUTIÃS</a
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="center">
+                      <a
+                        href="#"
+                        style="
+                          display: inline-block;
+                          font-size: 13.5px;
+                          width: 279px;
+                          background-color: #000;
+                          color: #fff;
+                          padding: 15px 0;
+                          border-radius: 5px;
+                          text-decoration: none;
+                          font-weight: 600;
+                          letter-spacing: 1px;
+                        "
+                        >PIJAMAS</a
+                      >
+                    </td>
+                    <td align="center">
+                      <a
+                        href="#"
+                        style="
+                          display: inline-block;
+                          font-size: 13.5px;
+                          width: 279px;
+                          background-color: #000;
+                          color: #fff;
+                          padding: 15px 0;
+                          border-radius: 5px;
+                          text-decoration: none;
+                          font-weight: 600;
+                          letter-spacing: 1px;
+                        "
+                        >NOVIDADES</a
+                      >
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <!-- Bloco de Imagens em Grade -->
+            <tr style="background-color: #efedea">
+              <td align="center" style="padding: 20px">
+                <table border="0" cellpadding="10" cellspacing="0" width="100%">
+                  <tr>
+                    <td align="center" style="width: 145px">
+                      <img
+                        src="https://hopelingerie.vtexassets.com/assets/vtex.file-manager-graphql/images/b8419dc4-080b-4f85-9368-42d03f04c26a___70dfd0ce668b81ea7370bb1a28a4ae45.png"
+                        alt="Categoria 1"
+                        style="width: 35px; max-width: 35px"
+                      />
+                      <h3 style="font-size: 14px; color: #000">NOSSAS LOJAS</h3>
+                      <p>Encontre uma loja</p>
+                    </td>
+                    <td align="center" style="width: 145px">
+                      <img
+                        src="https://hopelingerie.vtexassets.com/assets/vtex.file-manager-graphql/images/cabb9cbe-44b3-4584-aba8-595d130b6851___22ff4c070e41ad86dfc895df5b63f4c6.png"
+                        alt="Categoria 2"
+                        style="width: 40px; max-width: 40px"
+                      />
+                      <h3 style="font-size: 14px; color: #000">
+                        15% DE CASHBACK
+                      </h3>
+                      <p>Use na próxima compra</p>
+                    </td>
+                    <td align="center" style="width: 145px">
+                      <img
+                        src="https://hopelingerie.vtexassets.com/assets/vtex.file-manager-graphql/images/70d5eb80-4383-4599-8b63-023e47aaf744___289286ac3a0100f9481433c3896ad482.png"
+                        alt="Categoria 3"
+                        style="width: 40px; max-width: 40px"
+                      />
+                      <h3 style="font-size: 14px; color: #000">
+                        entrega expressa
+                      </h3>
+                      <p>Receba em até 24h</p>
+                    </td>
+                  </tr>
+                </table>
+                <table border="0" cellpadding="10" cellspacing="0" width="100%">
+                  <tr>
+                    <td align="center" style="width: 145px">
+                      <img
+                        src="https://hopelingerie.vtexassets.com/assets/vtex.file-manager-graphql/images/220109e1-6863-4e59-b1d2-2a2b32aaf92a___bf5524da1b4d08af116fc819b2b73e1f.png"
+                        alt="Categoria 1"
+                        style="width: 40px; max-width: 40px"
+                      />
+                      <h3 style="font-size: 14px; color: #000">
+                        COMPRE ONLINE
+                      </h3>
+                      <p>Via Whatsapp</p>
+                    </td>
+                    <td align="center" style="width: 145px">
+                      <img
+                        src="https://hopelingerie.vtexassets.com/assets/vtex.file-manager-graphql/images/11398a1f-3fdd-4e0d-8110-049458396ca2___9149ccfdf7a1e5280673daab301296e6.png"
+                        alt="Categoria 2"
+                        style="width: 40px; max-width: 40px"
+                      />
+                      <h3 style="font-size: 14px; color: #000">FRETE GRÁTIS</h3>
+                      <p>Acima de R$ 249*</p>
+                    </td>
+                    <td align="center" style="width: 145px">
+                      <img
+                        src="https://hopelingerie.vtexassets.com/assets/vtex.file-manager-graphql/images/ccd904e9-24d0-4700-81f6-13e85abde5a0___2b51ab45ba0c49dc99d04523585b0436.png"
+                        alt="Categoria 3"
+                        style="width: 40px; max-width: 40px"
+                      />
+                      <h3 style="font-size: 14px; color: #000">Troque fácil</h3>
+                      <p>Simples e rápido</p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- Rodapé - Redes Sociais -->
+            <tr>
+              <td
+                align="center"
+                style="
+                  padding: 40px 20px;
+                  font-size: 14px;
+                  color: #fff;
+                  background-color: #000;
+                "
+              >
+                <table
+                  width="100%"
+                  border="0"
+                  cellpadding="0"
+                  cellspacing="0"
+                  style="padding-right: 10px"
+                >
+                  <tr>
+                    <!-- Logo da HOPE alinhada à esquerda -->
+                    <td align="left" style="padding-left: 40px">
+                      <img
+                        src="https://hopelingerie.vtexassets.com/assets/vtex.file-manager-graphql/images/6193a4ec-910a-4bbf-ab38-1d5a85b45258___71894202d406b02d46a890ee073cfcba.png"
+                        alt="HOPE"
+                        style="display: block; max-height: 30px"
+                      />
+                    </td>
+
+                    <!-- Ícones sociais alinhados à direita -->
+                    <td align="right" style="padding-right: 20px">
+                      <table border="0" cellpadding="5" cellspacing="0">
+                        <tr>
+                          <td align="center" style="padding: 0 10px">
+                            <a
+                              href="#"
+                              style="color: #fff; text-decoration: none"
+                            >
+                              <img
+                                src="https://hopelingerie.vtexassets.com/assets/vtex.file-manager-graphql/images/403cd68e-e1d4-40d4-a8da-1ab8c7bde973___56cdaee24dc1c1ffbeac4e9d6212fbf8.png"
+                                alt="Facebook"
+                                height="24"
+                              />
+                            </a>
+                          </td>
+                          <td align="center" style="padding: 0 10px">
+                            <a
+                              href="#"
+                              style="color: #fff; text-decoration: none"
+                            >
+                              <img
+                                src="https://hopelingerie.vtexassets.com/assets/vtex.file-manager-graphql/images/31ed8fae-9004-44fe-af8a-85aae224b1a0___0e9d8afcc38248ed3efdcf837d0aa2c1.png"
+                                alt="Instagram"
+                                height="24"
+                              />
+                            </a>
+                          </td>
+                          <td align="center" style="padding: 0 10px">
+                            <a
+                              href="#"
+                              style="color: #fff; text-decoration: none"
+                            >
+                              <img
+                                src="https://hopelingerie.vtexassets.com/assets/vtex.file-manager-graphql/images/d55585ed-b9bd-49ce-a510-26a721e0b4ec___8302023d3abf66affb8f0f7f22f8f8aa.png"
+                                alt="LinkedIn"
+                                height="24"
+                              />
+                            </a>
+                          </td>
+                          <td align="center" style="padding: 0 10px">
+                            <a
+                              href="#"
+                              style="color: #fff; text-decoration: none"
+                            >
+                              <img
+                                src="https://hopelingerie.vtexassets.com/assets/vtex.file-manager-graphql/images/7b916d02-e3d8-4e3a-8181-e9c3172a0aef___d420b074a79f6477cb6dbde6cddc8aa3.png"
+                                alt="TikTok"
+                                height="24"
+                              />
+                            </a>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- footer -->
+            <tr>
+              <td
+                align="center"
+                style="
+                  padding: 20px;
+                  font-size: 14px;
+                  color: #000;
+                  background-color: #f2f1ef;
+                  font-size: 9px;
+                "
+              >
+                <p style="margin: 5px 0">
+                  Caso não queira mais receber nossos e-mails
+                  <a
+                    href="#"
+                    style="
+                      color: #000;
+                      font-weight: bold;
+                      text-decoration: none;
+                      font-size: 9px;
+                    "
+                    >acesse aqui</a
+                  >
+                </p>
+
+                <p style="margin: 5px 0">
+                  Para ver condições de pagamento, entrega, regras e promoções
+                  <a
+                    href="#"
+                    style="
+                      color: #000;
+                      font-weight: bold;
+                      text-decoration: none;
+                    "
+                    >acesse aqui</a
+                  >
+                </p>
+
+                <p style="margin: 10px 0; font-weight: bold">
+                  SAC HOPE LINGERIE
+                </p>
+                <p style="margin: 5px 0">CNPJ: 03.007.414/0001-30</p>
+                <p style="margin: 5px 0">
+                  E-mail:
+                  <a
+                    href="mailto:sac@hopelingerie.com.br"
+                    style="color: #000; text-decoration: none"
+                    >sac@hopelingerie.com.br</a
+                  >
+                </p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
