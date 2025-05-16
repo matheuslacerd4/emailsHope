@@ -55,11 +55,13 @@
               <td
                 align="center"
                 style="padding: 20px 0; font-size: 18px; color: #333333"
-              >
-                Olá, Samara. Recebemos seu pedido <br />
+              > {{#each orders}}
+                Olá, <strong>{{clientProfileData.firstName}}</strong>. Recebemos seu pedido <br />
+                
                 <strong style="font-size: 20px; color: #000"
-                  >v1795977hope-01</strong
+                  >{{orderId}}</strong
                 >
+                {{/each}}
               </td>
             </tr>
             <!-- Barra de status do pedido -->
@@ -81,7 +83,7 @@
             </tr>
             <!-- Resumo do pedido -->
             <tr>
-              <td style="padding: 20px; text-align: center; font-size: 16px">
+              <td style="padding: 0px 40px;; text-align: center; font-size: 16px">
                 <p
                   style="
                     font-weight: bold;
@@ -97,8 +99,9 @@
                   cellpadding="10"
                   cellspacing="0"
                   style="border-collapse: separate; border-spacing: 10px"
-                >
-                  <tr>
+                > 
+                  <tr> 
+                    {{#each orders}}
                     <td
                       style="
                         width: 50%;
@@ -107,7 +110,7 @@
                         border-radius: 15px;
                         padding: 15px;
                       "
-                    >
+                    > 
                       <h3
                         style="
                           margin: 0;
@@ -125,10 +128,10 @@
                           text-align: center;
                         "
                       >
-                        Avenida Doutor Hélio Ribeiro 525, Sala 02 Alvorada<br />
-                        Cuiabá - MT<br />
-                        78048-848<br />
-                        Brasil
+                      {{shippingData.address.street}}{{shippingData.address.number}}<br />
+                      {{shippingData.address.city}} - {{shippingData.address.state}}<br />
+                      {{shippingData.address.postalCode}}<br />
+                      {{shippingData.address.country}}
                       </p>
                     </td>
                     <td
@@ -157,136 +160,109 @@
                           text-align: center;
                         "
                       >
-                        Cartão de Crédito<br />
-                        com final 0487<br />
-                        R$ 100,03 (1x)
+                        <!--  -->
+
+                        <p style="margin: 5px 0; font-size: 12px; text-align: center;">
+                          {{#with paymentData.transactions.[0].payments.[0]}}
+                          {{paymentSystemName}} {{#if lastDigits}} final {{lastDigits}} {{/if}}<br />
+                          R$ {{formatCurrency value}} 
+                          {{#eq group "instantPayment"}}
+                          via Pix
+                          {{else}}
+                          {{#eq installments 1}}
+                           à vista
+                           {{else}}
+                          parcelado em {{installments}}x
+                           {{/eq}}
+                          {{/eq}}
+                        {{/with}}
+                        </p>
                       </p>
                     </td>
+                    {{/each}}
                   </tr>
                 </table>
               </td>
             </tr>
-
             <!-- Produtos do pedido -->
-            <tr>
-              <td style="padding: 20px">
+            {{#each orders}}
+              <td style="padding: 0 50px 20px 50px">
                 <table
                   width="100%"
                   border="0"
                   cellpadding="10"
                   cellspacing="0"
-                  style="
-                    border: 1px solid #d3c9c0;
-                    border-radius: 15px;
-                    border-spacing: 10px;
-                  "
+                  style="border: 1px solid #d3c9c0; border-radius: 15px; border-spacing: 10px"
                 >
+                  {{#each items}}
                   <tr>
-                    <td style="width: 80px; vertical-align: top">
+                    <td style="width: 96px; height: 128px; vertical-align: top">
                       <img
-                        src="https://hopelingerie.vtexassets.com/assets/vtex.file-manager-graphql/images/b26c2826-477e-48ba-bb65-caa921e85396___e308911813f9b4feac6c90229ffb960e.png"
-                        alt="Produto 1"
-                        style="border-radius: 8px; display: block"
+                        src="{{imageUrl}}"
+                        alt="{{name}}"
+                        style="border-radius: 8px; display: block; object-fit: cover;"
                       />
                     </td>
                     <td style="vertical-align: top">
-                      <strong
-                        style="
-                          font-size: 14px;
-                          display: block;
-                          margin-bottom: 5px;
-                        "
-                        >Body Regata Em Microfibra Canelada Free Preto</strong
-                      >
-                      <span style="font-size: 14px; font-weight: bold"
-                        >R$ 198,90</span
-                      ><br />
-                      <span style="font-size: 12px"
-                        >Tamanho: 42 - 1 unidade</span
-                      >
+                      <strong style="font-size: 14px; display: block; margin-bottom: 5px;">
+                        {{name}}
+                      </strong>
+                      <br />
+                      <span style="font-size: 14px; font-weight: bold">
+                        {{#if sellingPrice}}
+                          R$ {{formatCurrency sellingPrice}}
+                        {{else}}
+                          Grátis
+                        {{/if}}
+                      </span>
+                      <br />
+                      <span style="font-size: 12px">
+                        Tamanho: {{skuName}}
+                      </span>
+                      <br />
+                      <span style="font-size: 12px">
+                        {{quantity}} {{measurementUnit}}
+                      </span>
                     </td>
                   </tr>
-                  <tr>
-                    <td style="width: 80px; vertical-align: top">
-                      <img
-                        src="https://hopelingerie.vtexassets.com/assets/vtex.file-manager-graphql/images/b26c2826-477e-48ba-bb65-caa921e85396___e308911813f9b4feac6c90229ffb960e.png"
-                        alt="Produto 2"
-                        style="border-radius: 8px; display: block"
-                      />
-                    </td>
-                    <td style="vertical-align: top">
-                      <strong
-                        style="
-                          font-size: 14px;
-                          display: block;
-                          margin-bottom: 5px;
-                        "
-                        >Blusa Manga Longa Em Tule Personalizado Preto</strong
-                      >
-                      <span style="font-size: 14px; font-weight: bold"
-                        >R$ 198,90</span
-                      ><br />
-                      <span style="font-size: 12px"
-                        >Tamanho: M - 3 unidades</span
-                      >
-                    </td>
-                  </tr>
-                  <tr>
-                    <td
-                      colspan="2"
-                      style="text-align: center; padding-top: 10px"
-                    >
-                      <img
-                        src="https://cdn-icons-png.flaticon.com/512/709/709699.png"
-                        alt="Embalagem de presente"
-                        width="16"
-                        style="vertical-align: middle"
-                      />
-                      <span style="font-size: 12px; margin-left: 5px"
-                        >Embalagem para presente adicionado</span
-                      >
-                    </td>
-                  </tr>
+                  {{/each}}
                 </table>
               </td>
-            </tr>
-            <tr>
-              <td align="center">
-                <table
-                  role="presentation"
-                  width="100%"
-                  style="
-                    max-width: 400px;
-                    border-collapse: collapse;
-                    margin: auto;
-                  "
-                >
-                  <tr
-                    style="
-                      border-bottom: 1px solid #d3c9c0;
-                      padding-bottom: 5px;
-                    "
-                  >
-                    <td align="left" style="padding: 8px">Subtotal</td>
-                    <td align="right">R$ 200,00</td>
-                  </tr>
-                  <tr style="border-bottom: 1px solid #d3c9c0">
-                    <td align="left" style="padding: 8px">Descontos</td>
-                    <td align="right">-R$ 50,00</td>
-                  </tr>
-                  <tr style="border-bottom: 1px solid #d3c9c0">
-                    <td align="left" style="padding: 8px">Entrega</td>
-                    <td align="right">R$ 12,10</td>
-                  </tr>
-                  <tr style="border-bottom: 1px solid #d3c9c0">
-                    <td align="left" style="font-weight: bold; padding: 8px">
-                      Total
-                    </td>
-                    <td align="right" style="font-weight: bold">R$ 150,20</td>
-                  </tr>
-                </table>
-              </td>
-            </tr>
+              {{/each}}
+              {{#each orders}}
+              <tr>
+                <td style="padding: 0px 40px; text-align: center; font-size: 16px">
+                  <p style="font-weight: bold; font-size: 18px; margin-bottom: 15px;">
+                    Resumo do seu pedido
+                  </p>
+                  <table width="100%" border="0" cellpadding="8" cellspacing="0">
+                    {{#each totals}}
+                      {{#if value}}
+                        <tr style="box-sizing: border-box !important">
+                          <td style="font-size: 13px; line-height: 20px; box-sizing: border-box; border-collapse: collapse; text-align: left; border-bottom: 0px solid #eee; font-family: 'Helvetica', Arial, sans-serif;" align="left">
+                            {{#eq id "Items"}}Subtotal{{/eq}}
+                            {{#eq id "Shipping"}}Entrega{{/eq}}
+                            {{#eq id "Discounts"}}Descontos{{/eq}}
+                            {{#eq id "Tax"}}Taxas{{/eq}}
+                          </td>
+                          <td style="font-size: 13px; line-height: 20px; box-sizing: border-box; border-collapse: collapse; text-align: right; font-family: 'Helvetica', Arial, sans-serif;" align="right">
+                            R$ {{formatCurrency value}}
+                          </td>
+                        </tr>
+                      {{/if}}
+                    {{/each}}
+                    <tr style="box-sizing: border-box !important" bgcolor="#f7f7f7">
+                      <td style="font-size: 16px; line-height: 20px; box-sizing: border-box; border-collapse: collapse; text-align: left; font-weight: 500; padding-top: 0.25rem; padding-bottom: 0.25rem !important; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #000000;" align="left">
+                        Total
+                      </td>
+                      <td style="font-size: 16px; line-height: 20px; box-sizing: border-box; border-collapse: collapse; font-weight: bold; text-align: right; font-family: 'Helvetica', Arial, sans-serif; color: #000000;" align="right">
+                        R$ {{formatCurrency value}}
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              {{/each}}
             <tr>
               <td align="center">
                 <table
@@ -359,7 +335,8 @@
                   <tr>
                     <td align="center">
                       <a
-                        href="#"
+                      target="_blank"
+                        href="https://www.hopelingerie.com.br/calcinhas?utm_source=VTEX&utm_medium=EMKT&utm_campaign=regua_carrinho_abandonado_HOPE"
                         style="
                           display: inline-block;
                           font-size: 13.5px;
@@ -377,7 +354,8 @@
                     </td>
                     <td align="center">
                       <a
-                        href="#"
+                      target="_blank"
+                        href="https://www.hopelingerie.com.br/sutias?utm_source=VTEX&utm_medium=EMKT&utm_campaign=regua_carrinho_abandonado_HOPE"
                         style="
                           display: inline-block;
                           font-size: 13.5px;
@@ -397,7 +375,8 @@
                   <tr>
                     <td align="center">
                       <a
-                        href="#"
+                      target="_blank"
+                        href="https://www.hopelingerie.com.br/pijamas?utm_source=VTEX&utm_medium=EMKT&utm_campaign=regua_carrinho_abandonado_HOPE"
                         style="
                           display: inline-block;
                           font-size: 13.5px;
@@ -415,6 +394,8 @@
                     </td>
                     <td align="center">
                       <a
+                      target="_blank"
+                      
                         href="#"
                         style="
                           display: inline-block;
@@ -437,20 +418,31 @@
             </tr>
             <!-- Bloco de Imagens em Grade -->
             <tr style="background-color: #efedea">
-              <td align="center" style="padding: 20px">
+              <td align="center" style="padding: 20px; position: relative">
                 <table border="0" cellpadding="10" cellspacing="0" width="100%">
                   <tr>
-                    <td align="center" style="width: 145px">
-                      <img
+                    <td align="center" style="width: 145px; cursor: pointer;">
+                      <a 
+                        target="_blank"
+                        href="https://www.hopelingerie.com.br/encontre-uma-loja?utm_source=VTEX&utm_medium=EMKT&utm_campaign=regua_carrinho_abandonado_HOPE"
+                        style=" text-decoration: none; "
+                        >
+                        <img
+                        style="width: 35px; max-width: 35px; color: #000;"
                         src="https://hopelingerie.vtexassets.com/assets/vtex.file-manager-graphql/images/b8419dc4-080b-4f85-9368-42d03f04c26a___70dfd0ce668b81ea7370bb1a28a4ae45.png"
                         alt="Categoria 1"
-                        style="width: 35px; max-width: 35px"
+                        
                       />
                       <h3 style="font-size: 14px; color: #000">NOSSAS LOJAS</h3>
-                      <p>Encontre uma loja</p>
+                      <p style="text-decoration: none;color: #000">Encontre uma loja</p></a>
                     </td>
-                    <td align="center" style="width: 145px">
-                      <img
+                    <td align="center" style="width: 145px; cursor: pointer;">
+                      <a 
+                      href="https://www.hopelingerie.com.br/cashback?utm_source=VTEX&utm_medium=EMKT&utm_campaign=regua_carrinho_abandonado_HOPE"
+                      style="text-decoration: none; color: #000;"
+                      target="_blank">
+
+                        <img
                         src="https://hopelingerie.vtexassets.com/assets/vtex.file-manager-graphql/images/cabb9cbe-44b3-4584-aba8-595d130b6851___22ff4c070e41ad86dfc895df5b63f4c6.png"
                         alt="Categoria 2"
                         style="width: 40px; max-width: 40px"
@@ -458,25 +450,40 @@
                       <h3 style="font-size: 14px; color: #000">
                         15% DE CASHBACK
                       </h3>
-                      <p>Use na próxima compra</p>
+                      <p style="color: #000;">Use na próxima compra</p>
+
+                      </a>                     
                     </td>
-                    <td align="center" style="width: 145px">
-                      <img
+                    <td align="center" style="width: 145px; cursor: pointer;">
+                      <a 
+                      href="https://www.hopelingerie.com.br/duvidas-frequentes?utm_source=VTEX&utm_medium=EMKT&utm_campaign=regua_carrinho_abandonado_HOPE"
+                      style=" text-decoration: none; color: #000;"
+                      target="_blank"
+                      >
+                        <img
                         src="https://hopelingerie.vtexassets.com/assets/vtex.file-manager-graphql/images/70d5eb80-4383-4599-8b63-023e47aaf744___289286ac3a0100f9481433c3896ad482.png"
                         alt="Categoria 3"
                         style="width: 40px; max-width: 40px"
                       />
-                      <h3 style="font-size: 14px; color: #000">
-                        entrega expressa
+                      <h3 style="font-size: 14px; color: #000 !important">
+                        ENTREGA EXPRESSA
                       </h3>
-                      <p>Receba em até 24h</p>
+                      <p style="color: #000;">Receba em até 24h</p>
+
+                      </a>
+                      
                     </td>
                   </tr>
                 </table>
                 <table border="0" cellpadding="10" cellspacing="0" width="100%">
                   <tr>
-                    <td align="center" style="width: 145px">
-                      <img
+                    <td align="center" style="width: 145px; cursor: pointer;">
+                      <a 
+                      href="https://api.whatsapp.com/send?phone=5511945107491"
+                      style="text-decoration: none; color: #000;" 
+                      target="_blank"
+                      >
+                        <img
                         src="https://hopelingerie.vtexassets.com/assets/vtex.file-manager-graphql/images/220109e1-6863-4e59-b1d2-2a2b32aaf92a___bf5524da1b4d08af116fc819b2b73e1f.png"
                         alt="Categoria 1"
                         style="width: 40px; max-width: 40px"
@@ -484,28 +491,62 @@
                       <h3 style="font-size: 14px; color: #000">
                         COMPRE ONLINE
                       </h3>
-                      <p>Via Whatsapp</p>
+                      <p style="color: #000;">Via Whatsapp</p>
+                      </a>
+                      
                     </td>
-                    <td align="center" style="width: 145px">
-                      <img
+                    <td align="center" style="width: 145px; cursor: pointer;">
+                      <a 
+                      href="https://www.hopelingerie.com.br/?utm_source=VTEX&utm_medium=EMKT&utm_campaign=regua_carrinho_abandonado_HOPE"
+                      style="text-decoration: none; color: #000;"
+                      target="_blank"
+                      >
+                        <img
                         src="https://hopelingerie.vtexassets.com/assets/vtex.file-manager-graphql/images/11398a1f-3fdd-4e0d-8110-049458396ca2___9149ccfdf7a1e5280673daab301296e6.png"
                         alt="Categoria 2"
                         style="width: 40px; max-width: 40px"
                       />
                       <h3 style="font-size: 14px; color: #000">FRETE GRÁTIS</h3>
-                      <p>Acima de R$ 249*</p>
+                      <p style="color: #000;">Acima de R$ 249*</p>
+                      </a>
                     </td>
-                    <td align="center" style="width: 145px">
-                      <img
+                    
+                    <td align="center" style="width: 145px; cursor: pointer;;">
+                      <a 
+                      href="https://hopelingerie.troquefacil.com.br/" 
+                      style="text-decoration: none; color: #000;" 
+                      target="_blank">
+
+                        <img
                         src="https://hopelingerie.vtexassets.com/assets/vtex.file-manager-graphql/images/ccd904e9-24d0-4700-81f6-13e85abde5a0___2b51ab45ba0c49dc99d04523585b0436.png"
                         alt="Categoria 3"
                         style="width: 40px; max-width: 40px"
                       />
-                      <h3 style="font-size: 14px; color: #000">Troque fácil</h3>
-                      <p>Simples e rápido</p>
+                      <h3 style="font-size: 14px; color: #000">TROQUE FÁCIL</h3>
+                      <p style="color: #000;">Simples e rápido</p>
+                      </a>
+                      
                     </td>
                   </tr>
                 </table>
+                <a
+                target="_blank"
+                href="https://franquias.grupohope.com.br/seja-um-franqueado/"
+                style="
+                    position: absolute;
+                    text-decoration: none;
+                    top: 50%;
+                    right: -64px;
+                    transform: translateY(-50%) rotate(-90deg);
+                    background: #d2c9c0bf;
+                    color: #000;
+                    padding: 10px 20px;
+                    font-size: 10px;
+                    font-weight: bold;
+                  "
+                >
+                  SEJA UM FRANQUEADO
+                </a>
               </td>
             </tr>
 
@@ -543,7 +584,8 @@
                         <tr>
                           <td align="center" style="padding: 0 10px">
                             <a
-                              href="#"
+                            target="_blank"
+                              href="https://www.facebook.com/FaceDaHOPE"
                               style="color: #fff; text-decoration: none"
                             >
                               <img
@@ -555,7 +597,8 @@
                           </td>
                           <td align="center" style="padding: 0 10px">
                             <a
-                              href="#"
+                            target="_blank"
+                              href="https://www.instagram.com/hope.oficial"
                               style="color: #fff; text-decoration: none"
                             >
                               <img
@@ -567,7 +610,8 @@
                           </td>
                           <td align="center" style="padding: 0 10px">
                             <a
-                              href="#"
+                            target="_blank"
+                              href="https://www.linkedin.com/company/hope-lingerie"
                               style="color: #fff; text-decoration: none"
                             >
                               <img
@@ -579,7 +623,8 @@
                           </td>
                           <td align="center" style="padding: 0 10px">
                             <a
-                              href="#"
+                              target="_blank"
+                              href="https://www.tiktok.com/@hope.oficial"
                               style="color: #fff; text-decoration: none"
                             >
                               <img
@@ -626,7 +671,7 @@
                 <p style="margin: 5px 0">
                   Para ver condições de pagamento, entrega, regras e promoções
                   <a
-                    href="#"
+                    href="https://www.hopelingerie.com.br/regras-e-promocoes?utm_source=VTEX&utm_medium=EMKT&utm_campaign=regua_carrinho_abandonado_HOPE"
                     style="
                       color: #000;
                       font-weight: bold;
