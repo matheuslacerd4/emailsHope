@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pedido Realizado</title>
+    <title>Pagamento Aprovado</title>
   </head>
   <body
     style="
@@ -55,13 +55,13 @@
               <td
                 align="center"
                 style="padding: 20px 0; font-size: 18px; color: #333333"
-              > {{#each orders}}
+              > 
                 Olá, <strong>{{clientProfileData.firstName}}</strong>. Seu pedido <br />
                 
                 <strong style="font-size: 20px; color: #000"
                   >{{orderId}}</strong> <br />
                   foi <span style="color: #117037; font-weight: 600;">aprovado</span>!
-                {{/each}}
+                
               </td>
             </tr>
             <!-- Barra de status do pedido -->
@@ -101,7 +101,7 @@
                   style="border-collapse: separate; border-spacing: 10px"
                 > 
                   <tr> 
-                    {{#each orders}}
+                    
                     <td
                       style="
                         width: 50%;
@@ -179,13 +179,13 @@
                         </p>
                       </p>
                     </td>
-                    {{/each}}
+                    
                   </tr>
                 </table>
               </td>
             </tr>
             <!-- Produtos do pedido -->
-            {{#each orders}}
+            
               <td style="padding: 0 50px 20px 50px">
                 <table
                   width="100%"
@@ -228,8 +228,8 @@
                   {{/each}}
                 </table>
               </td>
-              {{/each}}
-              {{#each orders}}
+              
+              
               <tr>
                 <td style="padding: 0px 40px; text-align: center; font-size: 16px">
                   <p style="font-weight: bold; font-size: 18px; margin-bottom: 15px;">
@@ -262,7 +262,7 @@
                   </table>
                 </td>
               </tr>
-              {{/each}}
+              
             <tr>
               <td align="center">
                 <table
