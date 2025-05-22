@@ -18,7 +18,7 @@
       border="0"
       cellpadding="0"
       cellspacing="0"
-      style="background-color: #fcfaf5"
+      style="background-color: #fff"
     >
       <tr>
         <td>
@@ -35,11 +35,15 @@
                   Para visualizar este e-mail no navegador,
                   <a href="" style="color: #888888">clique aqui.</a>
                 </h1> -->
-                <img
+
+                <a href="https://www.hopelingerie.com.br/">
+                  <img
                   src="https://hopelingerie.vtexassets.com/assets/vtex.file-manager-graphql/images/2db0b013-05d1-4914-8f76-800b23487722___86ce0a95c01b0357504e2cf9a3d03bd1.png"
                   alt=""
                   style="padding: 30px 0"
                 />
+                </a>
+                
               </td>
             </tr>
           </td>
@@ -206,11 +210,11 @@
                       />
                     </td>
                     <td style="vertical-align: top">
-                      <span style="font-size: 14px; display: block; margin-bottom: 5px; overflow-wrap: break-word; width:350px">
+                      <span style="font-size: 12px; display: block; overflow-wrap: break-word; width:350px">
                         {{name}}
                       </span>
                       <br />
-                      <span style="font-size: 14px; font-weight: bold">
+                      <span style="font-size: 12px; font-weight: bold">
                         {{#if sellingPrice}}
                           R$ {{formatCurrency sellingPrice}}
                         {{else}}
@@ -219,11 +223,11 @@
                       </span>
                       <br />
                       <br />
-                      <span style="font-size: 12px">
+                      <span style="font-size: 10px">
                         Tamanho: {{skuName}}
                       </span>
                       <br />
-                      <span style="font-size: 12px">
+                      <span style="font-size: 10px">
                         {{quantity}} {{measurementUnit}}
                       </span>
                     </td>
@@ -240,23 +244,23 @@
                     {{#each totals}}
                       {{#if value}}
                         <tr style="box-sizing: border-box !important">
-                          <td style="border-bottom: 1px solid #eee; font-size: 13px; line-height: 20px; box-sizing: border-box; border-collapse: collapse; text-align: left; font-family: 'Helvetica', Arial, sans-serif; " align="left">
+                          <td style="border-bottom: 1px solid #eee; font-size: 13px; line-height: 20px; box-sizing: border-box; border-collapse: collapse; text-align: left; font-family:  Arial, sans-serif; " align="left">
                             {{#eq id "Items"}}Subtotal{{/eq}}
                             {{#eq id "Shipping"}}Entrega{{/eq}}
                             {{#eq id "Discounts"}}Descontos{{/eq}}
                             {{#eq id "Tax"}}Taxas{{/eq}}
                           </td>
-                          <td style="border-bottom: 1px solid #eee; font-size: 13px; line-height: 20px; box-sizing: border-box; border-collapse: collapse; text-align: right; font-family: 'Helvetica', Arial, sans-serif;" align="right">
+                          <td style="border-bottom: 1px solid #eee; font-size: 13px; line-height: 20px; box-sizing: border-box; border-collapse: collapse; text-align: right; font-family: Arial, sans-serif;" align="right">
                             R$ {{formatCurrency value}}
                           </td>
                         </tr>
                       {{/if}}
                     {{/each}}
                     <tr style="box-sizing: border-box !important">
-                      <td style="font-size: 16px; line-height: 20px; box-sizing: border-box; border-collapse: collapse; text-align: left; font-weight: 500; padding-top: 0.25rem; padding-bottom: 0.25rem !important; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #000000;" align="left">
+                      <td style="font-size: 16px; line-height: 20px; box-sizing: border-box; border-collapse: collapse; text-align: left; font-weight: 500; padding-top: 0.25rem; padding-bottom: 0.25rem !important; font-family: Arial, sans-serif; color: #000000;" align="left">
                         Total
                       </td>
-                      <td style="font-size: 16px; line-height: 20px; box-sizing: border-box; border-collapse: collapse; font-weight: bold; text-align: right; font-family: 'Helvetica', Arial, sans-serif; color: #000000;" align="right">
+                      <td style="font-size: 16px; line-height: 20px; box-sizing: border-box; border-collapse: collapse; font-weight: bold; text-align: right; font-family:  Arial, sans-serif; color: #000000;" align="right">
                         R$ {{formatCurrency value}}
                       </td>
                     </tr>
@@ -332,7 +336,7 @@
                 <h2 style="margin: 10px 0; font-size: 16px">
                   COMPRE AGORA NAS PRINCIPAIS CATEGORIAS
                 </h2>
-                <table border="0" cellpadding="10" cellspacing="0" width="100%">
+                <table border="0" cellpadding="10" cellspacing="0" width="100%" style="padding: 0 50px 15px 50px;">
                   <tr>
                     <td align="center">
                       <a
@@ -397,7 +401,7 @@
                       <a
                       target="_blank"
                       
-                        href="#"
+                        href="https://www.hopelingerie.com.br/todo-site"
                         style="
                           display: inline-block;
                           font-size: 13.5px;
@@ -504,6 +508,7 @@
                       color: #000;
                       background-color: #f2f1ef;
                       font-size: 9px;
+                      letter-spacing: 0.4px;
                     "
                   >
                     <p style="margin: 5px 0">
