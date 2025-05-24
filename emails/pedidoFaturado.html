@@ -56,14 +56,10 @@
             <tr>
               <td
                 align="center"
-                style="padding: 20px 0; font-size: 18px; color: #333333;"
-              > 
-                Olá, <span>{{clientProfileData.firstName}}</span>. Seu pedido <br />
-                
-                <strong style="font-size: 20px; color: #000"
-                  >{{orderId}}</strong> <br />
-                  foi <span style="color: #117037; font-weight: 600;">faturado</span>!
-                
+                style="padding-bottom: 20px; font-size: 18px; color: #333333;"> 
+              <p style="margin-bottom: -5px ;"> Olá, <span>{{clientProfileData.firstName}}</span>. Seu pedido </p>
+              <p style="margin: 10px 0;"><strong style="font-size: 20px; color: #000">{{orderId}}</strong></p>
+              <p style="margin-top: -5px ;">foi <span style="color: #117037; font-weight: 600;">faturado</span>!</p> 
               </td>
             </tr>
             <!-- Barra de status do pedido -->
@@ -76,16 +72,14 @@
               </td>
             </tr>
             <tr>
-              <td align="center" style="padding-bottom: 20px">
-                <p>
-                  Você receberá um e-email automaticamente  <br />
-                  pelo Sistema de Nota Fiscal Eletrônica (NF-e)
-                </p>
+              <td align="center" style="padding-bottom: 20px; letter-spacing: 0.4px; font-size: 18px">
+                <p style="margin-bottom: -5px;">Você receberá um e-email automaticamente</p>
+                <p style="margin-top: 12px;"> pelo Sistema de Nota Fiscal Eletrônica (NF-e)</p>
               </td>
             </tr>
             <!-- Resumo do pedido -->
             <tr>
-              <td style="padding: 0px 70px;; text-align: center; font-size: 16px">
+              <td style="padding: 0px 70px;; text-align: center;">
                 <p
                   style="
                     
@@ -194,7 +188,7 @@
                   border="0"
                   cellpadding="10"
                   cellspacing="0"
-                  style="border: 1px solid #d3c9c0; border-radius: 15px; border-spacing: 10px"
+                  style="border: 1px solid #d3c9c0; border-radius: 15px; border-spacing: 30px 10px"
                 >
                   {{#each items}}
                   <tr>
@@ -224,7 +218,7 @@
                       </span>
                       <br />
                       <span style="font-size: 10px">
-                        {{quantity}} {{measurementUnit}}
+                        {{quantity}} {{#eq quantity 1}} unidade {{else}} unidades {{/eq}}
                       </span>
                     </td>
                   </tr>
@@ -240,13 +234,13 @@
                     {{#each totals}}
                       {{#if value}}
                         <tr style="box-sizing: border-box !important">
-                          <td style="border-bottom: 1px solid #eee; font-size: 13px; line-height: 20px; box-sizing: border-box; border-collapse: collapse; text-align: left; font-family:  Arial, sans-serif; " align="left">
+                          <td style="border-bottom: 1px solid #d3c9c0; font-size: 13px; line-height: 20px; box-sizing: border-box; border-collapse: collapse; text-align: left; font-family:  Arial, sans-serif; " align="left">
                             {{#eq id "Items"}}Subtotal{{/eq}}
                             {{#eq id "Shipping"}}Entrega{{/eq}}
                             {{#eq id "Discounts"}}Descontos{{/eq}}
                             {{#eq id "Tax"}}Taxas{{/eq}}
                           </td>
-                          <td style="border-bottom: 1px solid #eee; font-size: 13px; line-height: 20px; box-sizing: border-box; border-collapse: collapse; text-align: right; font-family:  Arial, sans-serif;" align="right">
+                          <td style="border-bottom: 1px solid #d3c9c0; font-size: 13px; line-height: 20px; box-sizing: border-box; border-collapse: collapse; text-align: right; font-family:  Arial, sans-serif;" align="right">
                             R$ {{formatCurrency value}}
                           </td>
                         </tr>
@@ -273,7 +267,7 @@
                   style="
                     max-width: 536px;
                     background-color: #d2c9c0;
-                    border-radius: 8px;
+                    border-radius: 15px;
                     padding: 15px;
                     margin: 20px auto;
                   "
@@ -294,15 +288,16 @@
                   <tr>
                     <td
                       align="center"
-                      style="font-size: 18px; font-weight: bold"
+                      style="font-size: 18px;"
                     >
-                      Você ganhou 15% de cashback!
+                      Você ganhou 
+                      <strong>15% de cashback!</strong>
                     </td>
                   </tr>
                   <tr>
                     <td
                       align="center"
-                      style="font-size: 14px; padding: 10px 15px"
+                      style="font-size: 14px; padding: 10px 15px 30px 15px; line-height: 1.5; letter-spacing: 0.4px;"
                     >
                       Disponível para ser usado na sua próxima compra.<br />
                       Te enviaremos um SMS com todas as informações<br />
@@ -317,6 +312,7 @@
                           color: #000;
                           text-decoration: underline;
                           font-size: 14px;
+                          
                         "
                         >Confira as regras</a
                       >
