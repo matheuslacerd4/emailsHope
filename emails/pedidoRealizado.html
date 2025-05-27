@@ -9,7 +9,7 @@
     style="
       margin: 0;
       padding: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Montserrat', arial, sans-serif;
       background-color: #fff;
     "
   >
@@ -62,8 +62,8 @@
                 align="center"
                 style="padding-bottom: 20px; font-size: 18px; color: #333333"
               > {{#each orders}}
-              <p style="margin-bottom: -5px;">Olá, <span>{{clientProfileData.firstName}}</span>. Recebemos seu pedido</p>
-              <p style="margin-top: 12px;"><strong style="font-size: 20px; color: #000">{{orderId}}</strong></p>
+              <p style="margin-bottom: -5px; font-family: 'Montserrat', arial, sans-serif;">Olá, <span>{{clientProfileData.firstName}}</span>. Recebemos seu pedido</p>
+              <p style="margin-top: 12px; font-family: 'Montserrat', arial, sans-serif;"><strong style="font-size: 20px; color: #000">{{orderId}}</strong></p>
                 {{/each}}
               </td>
             </tr>
@@ -78,10 +78,10 @@
             </tr>
             <tr>
               <td align="center" style="padding-bottom: 25px; letter-spacing: 0.4px; font-size: 18px">
-                <p style="margin-bottom: -5px;">
+                <p style="margin-bottom: -5px;font-family: 'Montserrat', arial, sans-serif;">
                   Agradecemos a preferência!
                 </p>
-                <p style="margin-top: 12px;">Em breve você receberá atualizações por e-mail.</p>
+                <p style="margin-top: 12px; font-family: 'Montserrat', arial, sans-serif;">Em breve você receberá atualizações por e-mail.</p>
               </td>
             </tr>
             <!-- Resumo do pedido -->
@@ -94,6 +94,7 @@
                     margin-bottom: 15px;
                     letter-spacing: 0.4px;
                     font-size: 18px;
+                    font-family: 'Montserrat', arial, sans-serif;
                   "
                 >
                   Resumo do seu pedido
@@ -103,7 +104,7 @@
                   border="0"
                   cellpadding="10"
                   cellspacing="0"
-                  style="border-collapse: separate; border-spacing: 10px"
+                  style="border-collapse: separate; border-spacing: 10px; font-family: 'Montserrat', arial, sans-serif;"
                 > 
                   <tr> 
                     {{#each orders}}
@@ -191,7 +192,7 @@
             </tr>
             <!-- Produtos do pedido -->
             {{#each orders}}
-              <td style="padding: 0 79px 20px 79px">
+              <td style="padding: 0 79px 20px 79px; font-family: 'Montserrat', arial, sans-serif;">
                 <table
                   width="100%"
                   border="0"
@@ -209,11 +210,11 @@
                       />
                     </td>
                     <td style="vertical-align: top">
-                      <span style="font-size: 14px; display: block; overflow-wrap: break-word; width:350px">
+                      <span style="font-size: 14px; display: block; overflow-wrap: break-word; width:350px;line-height: 1.2;">
                         {{name}}
                       </span>
                       <br />
-                      <span style="font-size: 12px; font-weight: bold">
+                      <span style="font-size: 14px; font-weight: bold">
                         {{#if sellingPrice}}
                           R$ {{formatCurrency sellingPrice}}
                         {{else}}
@@ -231,6 +232,14 @@
                         </span>
                     </td>
                   </tr>
+                  <!-- <tr>
+                    <td>
+                      <a href="/" style="">
+                        <img src="https://hopelingerie.vtexassets.com/assets/vtex.file-manager-graphql/images/e8a94a0c-da64-4f96-aafd-18ed023a9eaf___82228bfdfc4c1e11a8fea0cccc850b04.png" alt="" style="display:inline-block; width: 18px; height: 18px;">
+                        Embalagem para presente adicionado
+                      </a>
+                    </td>
+                  </tr> -->
                   {{/each}}
                 </table>
               </td>
@@ -243,23 +252,23 @@
                     {{#each totals}}
                       {{#if value}}
                         <tr style="box-sizing: border-box !important">
-                          <td style="border-bottom: 1px solid #d3c9c0; font-size: 13px; line-height: 20px; box-sizing: border-box; border-collapse: collapse; text-align: left; font-family:  Arial, sans-serif; " align="left">
+                          <td style="border-bottom: 1px solid #d3c9c0; font-size: 13px; line-height: 20px; box-sizing: border-box; border-collapse: collapse; text-align: left; font-family:  'Montserrat', arial, sans-serif; " align="left">
                             {{#eq id "Items"}}Subtotal{{/eq}}
                             {{#eq id "Shipping"}}Entrega{{/eq}}
                             {{#eq id "Discounts"}}Descontos{{/eq}}
                             {{#eq id "Tax"}}Taxas{{/eq}}
                           </td>
-                          <td style="border-bottom: 1px solid #d3c9c0; font-size: 13px; line-height: 20px; box-sizing: border-box; border-collapse: collapse; text-align: right; font-family: Arial, sans-serif;" align="right">
+                          <td style="border-bottom: 1px solid #d3c9c0; font-size: 13px; line-height: 20px; box-sizing: border-box; border-collapse: collapse; text-align: right; font-family: 'Montserrat', arial, sans-serif;" align="right">
                             R$ {{formatCurrency value}}
                           </td>
                         </tr>
                       {{/if}}
                     {{/each}}
                     <tr style="box-sizing: border-box !important">
-                      <td style="font-size: 16px; line-height: 20px; box-sizing: border-box; border-collapse: collapse; text-align: left; font-weight: 500; padding-top: 0.25rem; padding-bottom: 0.25rem !important; font-family: Arial, sans-serif; color: #000000;" align="left">
+                      <td style="font-size: 16px; line-height: 20px; box-sizing: border-box; border-collapse: collapse; text-align: left; font-weight: 500; padding-top: 0.25rem; padding-bottom: 0.25rem !important; font-family: 'Montserrat', arial, sans-serif; color: #000000;" align="left">
                         Total
                       </td>
-                      <td style="font-size: 16px; line-height: 20px; box-sizing: border-box; border-collapse: collapse; font-weight: bold; text-align: right; font-family:  Arial, sans-serif; color: #000000;" align="right">
+                      <td style="font-size: 16px; line-height: 20px; box-sizing: border-box; border-collapse: collapse; font-weight: bold; text-align: right; font-family:  'Montserrat', arial, sans-serif; color: #000000;" align="right">
                         R$ {{formatCurrency value}}
                       </td>
                     </tr>
@@ -290,6 +299,7 @@
                           max-width: 50px;
                           display: block;
                           margin: 0 auto 10px;
+                          
                         "
                       />
                     </td>
@@ -297,7 +307,7 @@
                   <tr>
                     <td
                       align="center"
-                      style="font-size: 18px;"
+                      style="font-size: 18px; font-family: 'Montserrat', arial, sans-serif;"
                     >
                       Você ganhou 
                       <strong>15% de cashback!</strong>
@@ -306,7 +316,7 @@
                   <tr>
                     <td
                       align="center"
-                      style="font-size: 14px; padding: 10px 15px 30px 15px; line-height: 1.5; letter-spacing: 0.4px;"
+                      style="font-size: 14px; padding: 10px 15px 30px 15px; line-height: 1.5; font-family: 'Montserrat', arial, sans-serif;"
                     >
                       Disponível para ser usado na sua próxima compra.<br />
                       Te enviaremos um SMS com todas as informações<br />
@@ -321,7 +331,7 @@
                           color: #000;
                           text-decoration: underline;
                           font-size: 14px;
-                          
+                          font-family: 'Montserrat', arial, sans-serif;
                         "
                         >Confira as regras</a
                       >
@@ -333,8 +343,8 @@
 
             <!-- Categorias principais -->
             <tr>
-              <td align="center" style="padding-top: 20px; background-color: #fff">
-                <h2 style="margin: 10px 0; font-size: 16px">
+              <td align="center" style="padding-top: 20px; background-color: #fff; font-family: 'Montserrat', arial, sans-serif;">
+                <h2 style="margin: 10px 0; font-size: 16px; font-family: 'Montserrat', arial, sans-serif;">
                   COMPRE AGORA NAS PRINCIPAIS CATEGORIAS
                 </h2>
                 <table border="0" cellpadding="10" cellspacing="0" width="100%" style="padding: 0 50px 15px 50px;">
@@ -401,8 +411,7 @@
                     <td align="center">
                       <a
                       target="_blank"
-                      
-                        href="https://www.hopelingerie.com.br/todo-site"
+                        href="https://www.hopelingerie.com.br/todo-site?utm_source=VTEX&utm_medium=EMKT&utm_campaign=regua_email_transacional_HOPE"
                         style="
                           display: inline-block;
                           font-size: 13.5px;
@@ -423,27 +432,27 @@
               </td>
             </tr>
             <!-- Bloco de Imagens em Grade -->
-            <table border="0" cellpadding="0" cellspacing="0" height="140" width="700" style="background-color: #EFEDEA;">
+            <table border="0" cellpadding="0" cellspacing="0" height="140" width="735.8" style="background-color: #EFEDEA;">
 											  <tbody>
 												 <tr>
-													<td height="140" width="32">&nbsp;</td>
+													
 													<td height="140" width="635" style="padding: 15px 0px; margin: 0px auto;">
 													   <table align="center" border="0" cellpadding="0" cellspacing="0" height="140" style="padding: 24px 0; border-top: none; height: 100px; width: 500px; margin: 0px auto;" valign="top" width="635">
 														  <tbody>
 															 <tr>
 																<td style="text-align: center; color: #575756; font-size:11px; width: 180px;">
 																   <a href="https://www.hopelingerie.com.br/encontre-uma-loja" target="_blank"><img border="0" src="http://hopeweb.com.br/newsletters/news_2024/07_Julho/00-New-Header-Footer-2024/nossas-lojas.png" style="display:inline-block; padding-bottom: 0px; width: 27px; height: 30px;"></a><br><p style="height: 10px; width: 10px; margin: 0px auto;"></p>
-																   <a href="https://www.hopelingerie.com.br/encontre-uma-loja" style="color: #000; text-decoration: none; font-family: 'Montserrat', sans-serif;" target="_blank"><strong>NOSSAS LOJAS</strong><br>
+																   <a href="https://www.hopelingerie.com.br/encontre-uma-loja" style="color: #000; text-decoration: none; font-family: 'Montserrat', arial, sans-serif;" target="_blank"><strong>NOSSAS LOJAS</strong><br>
 																	  Encontre uma loja</a>                                             
 																</td>
 																<td style="text-align: center; color: #575756; font-size:11px; width: 180px;">
 																   <a href="https://www.hopelingerie.com.br/cashback" target="_blank"><img border="0" src="http://hopeweb.com.br/newsletters/news_2024/07_Julho/00-New-Header-Footer-2024/15-cashback.png" style="display:inline-block; padding-bottom: 0px; width: 36px; height: 31px;"></a><br><p style="height: 10px; width: 10px; margin: 0px auto;"></p>
-																   <a href="https://www.hopelingerie.com.br/cashback" style="color: #000; text-decoration: none; width: 50px; font-family: 'Montserrat', sans-serif;" target="_blank"><strong>15% DE CASHBACK</strong><br>
-																	  Para a próxima compra</a>                                             
+																   <a href="https://www.hopelingerie.com.br/cashback" style="color: #000; text-decoration: none; width: 50px; font-family: 'Montserrat', arial, sans-serif;" target="_blank"><strong>15% DE CASHBACK</strong><br>
+																	  Use na próxima compra</a>                                             
 																</td>
 																<td style="text-align: center; color: #575756; font-size:11px; width: 180px;">
 																   <a href="https://www.hopelingerie.com.br/duvidas-frequentes" target="_blank"><img border="0" src="http://hopeweb.com.br/newsletters/news_2024/07_Julho/00-New-Header-Footer-2024/entrega-expressa.png" style="display:inline-block; padding-bottom: 0px; width: 36; height: 29px;"></a><br><p style="height: 10px; width: 10px; margin: 0px auto;"></p>
-																   <a href="https://www.hopelingerie.com.br/duvidas-frequentes" style="color: #000; text-decoration: none; font-family: 'Montserrat', sans-serif;" target="_blank"><strong>ENTREGA EXPRESSA</strong><br>
+																   <a href="https://www.hopelingerie.com.br/duvidas-frequentes" style="color: #000; text-decoration: none; font-family: 'Montserrat', arial, sans-serif;" target="_blank"><strong>ENTREGA EXPRESSA</strong><br>
 																	  Receba em até 24h</a>                                             
 																</td>
 															 </tr>
@@ -454,17 +463,17 @@
 															 <tr>
 																<td style="text-align: center; color: #575756; font-size:11px; width: 180px;">
 																   <a href="https://api.whatsapp.com/send?phone=5511945107491" target="_blank"><img border="0" src="http://hopeweb.com.br/newsletters/news_2024/07_Julho/00-New-Header-Footer-2024/whatsapp.png" style="display:inline-block; padding-bottom: 0px; width: 30px; height: 30px;"></a><br><p style="height: 10px; width: 10px; margin: 0px auto;"></p>
-																   <a href="https://api.whatsapp.com/send?phone=5511945107491" style="color: #000; text-decoration: none; font-family: 'Montserrat', sans-serif;" target="_blank"><strong>COMPRE ONLINE</strong><br>
+																   <a href="https://api.whatsapp.com/send?phone=5511945107491" style="color: #000; text-decoration: none; font-family: 'Montserrat', arial, sans-serif;" target="_blank"><strong>COMPRE ONLINE</strong><br>
 																	  Via Whatsapp</a>                                             
 																</td>
 																<td style="text-align: center; color: #575756; font-size:11px; width: 180px;">
 																   <a href="https://hopelingerie.com.br/" target="_blank"><img border="0" src="http://hopeweb.com.br/newsletters/news_2024/07_Julho/00-New-Header-Footer-2024/frete.png" style="display:inline-block; padding-bottom: 0px; width: 38px; height: 27px;"></a><br><p style="height: 10px; width: 10px; margin: 0px auto;"></p>
-																   <a href="https://hopelingerie.com.br/" style="color: #000; text-decoration: none; width: 50px; font-family: 'Montserrat', sans-serif;" target="_blank"><strong>FRETE GRÁTIS</strong><br>
+																   <a href="https://hopelingerie.com.br/" style="color: #000; text-decoration: none; width: 50px; font-family: 'Montserrat', arial, sans-serif;" target="_blank"><strong>FRETE GRÁTIS</strong><br>
 																	  Acima de R$ 249*</a>                                             
 																</td>
 																<td style="text-align: center; color: #575756; font-size:11px; width: 180px;">
 																   <a href="https://hopelingerie.troquefacil.com.br/" target="_blank"><img border="0" src="http://hopeweb.com.br/newsletters/news_2024/07_Julho/00-New-Header-Footer-2024/troque.png" style="display:inline-block; padding-bottom: 0px; width: 39px; height: 28px;"></a><br><p style="height: 10px; width: 10px; margin: 0px auto;"></p>
-																   <a href="https://hopelingerie.troquefacil.com.br/" style="color: #000; text-decoration: none; font-family: 'Montserrat', sans-serif;" target="_blank"><strong>TROQUE FÁCIL</strong><br>
+																   <a href="https://hopelingerie.troquefacil.com.br/" style="color: #000; text-decoration: none; font-family: 'Montserrat', arial, sans-serif;" target="_blank"><strong>TROQUE FÁCIL</strong><br>
 																	  Simples e rápido</a>                                             
 																</td>
 															 </tr>
@@ -483,7 +492,7 @@
 										   </table>
 
             <!-- Rodapé - Redes Sociais -->
-            <table align="center" bgcolor="#000" border="0" cellpadding="0" cellspacing="0" height="104" valign="middle" width="700" style="background: #000000;">
+            <table align="center" bgcolor="#000" border="0" cellpadding="0" cellspacing="0" height="104" valign="middle" width="735.8" style="background: #000000;">
 											  <tbody>
 												 <tr height="104">
 													<td height="104" width="20">&nbsp;</td>
@@ -498,7 +507,7 @@
 										   </table>
 
             <!-- footer -->
-                <table align="center" bgcolor="#FFFFFF" style="background: #ffffff;" border="0" cellpadding="0" cellspacing="0" width="700">
+                <table align="center" bgcolor="#FFFFFF" style="background: #ffffff;" border="0" cellpadding="0" cellspacing="0" width="735.8">
                   <tbody>
                   <tr>					
                     <td
@@ -507,26 +516,14 @@
                       padding: 20px;
                       font-size: 14px;
                       color: #000;
-                      background-color: #f2f1ef;
+                      background-color: #fff;
                       font-size: 9px;
                       letter-spacing: 0.4px;
+                      font-family: 'Montserrat', arial, sans-serif;
                     "
                   >
-                    <p style="margin: 5px 0">
-                      Caso não queira mais receber nossos e-mails
-                      <a
-                        href="#"
-                        style="
-                          color: #000;
-                          font-weight: bold;
-                          text-decoration: none;
-                          font-size: 9px;
-                        "
-                        >acesse aqui</a
-                      >
-                    </p>
 
-                    <p style="margin: 5px 0">
+                    <p style="margin: 5px 0 ">
                       Para ver condições de pagamento, entrega, regras e promoções
                       <a
                         href="https://www.hopelingerie.com.br/regras-e-promocoes?utm_source=VTEX&utm_medium=EMKT&utm_campaign=regua_email_transacional_HOPE"
@@ -539,7 +536,7 @@
                       >
                     </p>
 
-                    <p style="margin: 10px 0; font-weight: bold">
+                    <p style="margin: 15px 0 5px 0;">
                       SAC HOPE LINGERIE
                     </p>
                     <p style="margin: 5px 0">CNPJ: 03.007.414/0001-30</p>
@@ -547,7 +544,7 @@
                       E-mail:
                       <a
                         href="mailto:sac@hopelingerie.com.br"
-                        style="color: #000; text-decoration: none"
+                        style="color: #000;"
                         >sac@hopelingerie.com.br</a
                       >
                     </p>
