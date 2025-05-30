@@ -1,30 +1,24 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pedido Realizado</title>
-  </head>
-  <body
-    style="
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pedido Realizado</title>
+</head>
+
+<body style="
       margin: 0;
       padding: 0;
       font-family: 'Montserrat', arial, sans-serif;
       background-color: #fff;
-    "
-  >
-    <table
-      width="100%"
-      border="0"
-      cellpadding="0"
-      cellspacing="0"
-      style="background-color: #fff"
-    >
-      <tr>
-        <td>
-          <tr>
-              <td align="center" style="background-color: #fff">
-                <!-- <h1
+    ">
+  <table width="100%" border="0" cellpadding="0" cellspacing="0" style="background-color: #fff">
+    <tr>
+      <td>
+    <tr>
+      <td align="center" style="background-color: #fff">
+        <!-- <h1
                   style="
                     margin: 0;
                     font-size: 10px;
@@ -36,525 +30,525 @@
                   <a href="" style="color: #888888">clique aqui.</a>
                 </h1> -->
 
-                <a href="https://www.hopelingerie.com.br/">
-                  <img
-                  src="https://hopelingerie.vtexassets.com/assets/vtex.file-manager-graphql/images/2db0b013-05d1-4914-8f76-800b23487722___86ce0a95c01b0357504e2cf9a3d03bd1.png"
-                  alt=""
-                  style="padding: 30px 0"
-                />
-                </a>
-                
-              </td>
-            </tr>
+        <a href="https://www.hopelingerie.com.br/">
+          <img
+            src="https://hopelingerie.vtexassets.com/assets/vtex.file-manager-graphql/images/2db0b013-05d1-4914-8f76-800b23487722___86ce0a95c01b0357504e2cf9a3d03bd1.png"
+            alt="" style="padding: 30px 0" />
+        </a>
+
+      </td>
+    </tr>
+    </td>
+    <td align="center" style="width: 145px">
+      <table width="735" border="0" cellpadding="0" cellspacing="0"
+        style="background-color: #fcfaf5; padding-top: 20px">
+
+        <!-- Texto de confirmação de pedido -->
+        <tr>
+          <td align="center" style="padding-bottom: 20px; font-size: 18px; color: #333333"> {{#each orders}}
+            <p style="margin-bottom: -5px; font-family: 'Montserrat', arial, sans-serif;">Olá,
+              <span>{{clientProfileData.firstName}}</span>. Recebemos seu pedido
+            </p>
+            <p style="margin-top: 12px; font-family: 'Montserrat', arial, sans-serif;"><strong
+                style="font-size: 20px; color: #1E130D">{{orderId}}</strong></p>
+            {{/each}}
           </td>
-        <td align="center" style="width: 145px">
-          <table
-            width="700"
-            border="0"
-            cellpadding="0"
-            cellspacing="0"
-            style="background-color: #fcfaf5; padding-top: 20px"
-          >
-           
-            <!-- Texto de confirmação de pedido -->
-            <tr>
-              <td
-                align="center"
-                style="padding-bottom: 20px; font-size: 18px; color: #333333"
-              > {{#each orders}}
-              <p style="margin-bottom: -5px; font-family: 'Montserrat', arial, sans-serif;">Olá, <span>{{clientProfileData.firstName}}</span>. Recebemos seu pedido</p>
-              <p style="margin-top: 12px; font-family: 'Montserrat', arial, sans-serif;"><strong style="font-size: 20px; color: #000">{{orderId}}</strong></p>
-                {{/each}}
-              </td>
-            </tr>
-            <!-- Barra de status do pedido -->
-            <tr>
-              <td align="center" style="padding: 20px 0">
-                <img
-                  src="https://hopelingerie.vtexassets.com/assets/vtex.file-manager-graphql/images/7fa8634a-37ec-4e41-a43d-f9403b7a41ea___b93e65f4272e695e38f22f0cf8d5f601.png"
-                  alt="Status do pedido"
-                />
-              </td>
-            </tr>
-            <tr>
-              <td align="center" style="padding-bottom: 25px; letter-spacing: 0.4px; font-size: 18px">
-                <p style="margin-bottom: -5px;font-family: 'Montserrat', arial, sans-serif;">
-                  Agradecemos a preferência!
-                </p>
-                <p style="margin-top: 12px; font-family: 'Montserrat', arial, sans-serif;">Em breve você receberá atualizações por e-mail.</p>
-              </td>
-            </tr>
-            <!-- Resumo do pedido -->
-            <tr>
-              <td style="padding: 0px 70px;; text-align: center;">
-                <p
-                  style="
+        </tr>
+        <!-- Barra de status do pedido -->
+        <tr>
+          <td align="center" style="padding: 20px 0">
+            <img
+              src="https://hopelingerie.vtexassets.com/assets/vtex.file-manager-graphql/images/7fa8634a-37ec-4e41-a43d-f9403b7a41ea___b93e65f4272e695e38f22f0cf8d5f601.png"
+              alt="Status do pedido" />
+          </td>
+        </tr>
+        <tr>
+          <td align="center" style="padding-bottom: 25px; letter-spacing: 0.4px; font-size: 18px;">
+            <p style="margin-bottom: -5px;font-family: 'Montserrat', arial, sans-serif;">
+              Agradecemos a preferência!
+            </p>
+            <p style="margin-top: 12px; font-family: 'Montserrat', arial, sans-serif;">Em breve você receberá
+              atualizações por e-mail.</p>
+          </td>
+        </tr>
+        <!-- Resumo do pedido -->
+        <tr>
+          <td style="padding: 0px 70px;; text-align: center;">
+            <p style="
                    
                     font-size: 18px;
                     margin-bottom: 15px;
                     letter-spacing: 0.4px;
                     font-size: 18px;
                     font-family: 'Montserrat', arial, sans-serif;
-                  "
-                >
-                  Resumo do seu pedido
-                </p>
-                <table
-                  width="100%"
-                  border="0"
-                  cellpadding="10"
-                  cellspacing="0"
-                  style="border-collapse: separate; border-spacing: 10px; font-family: 'Montserrat', arial, sans-serif;"
-                > 
-                  <tr> 
-                    {{#each orders}}
-                    <td
-                      style="
+                  ">
+              Resumo do seu pedido
+            </p>
+            <table width="100%" border="0" cellpadding="10" cellspacing="0"
+              style="border-collapse: separate; border-spacing: 10px; font-family: 'Montserrat', arial, sans-serif;">
+              <tr>
+                {{#each orders}}
+                <td style="
                         width: 50%;
                         vertical-align: top;
                         border: 1px solid #d3c9c0;
                         border-radius: 15px;
                         padding: 15px;
-                      "
-                    > 
-                      <h3
-                        style="
+                      ">
+                  <h3 style="
                           margin: 0;
                           font-size: 15px;
                           font-weight: bold;
                           text-align: center;
-                        "
-                      >
-                        Endereço de entrega
-                      </h3>
-                      <p
-                        style="
+                        ">
+                    Endereço de entrega
+                  </h3>
+                  <p style="
                           margin: 5px 0;
                           font-size: 12px;
                           text-align: center;
-                        "
-                      >
-                      {{shippingData.address.street}}{{shippingData.address.number}}<br />
-                      {{shippingData.address.city}} - {{shippingData.address.state}}<br />
-                      {{shippingData.address.postalCode}}<br />
-                      {{shippingData.address.country}}
-                      </p>
-                    </td>
-                    <td
-                      style="
+                        ">
+                    {{shippingData.address.street}}, {{shippingData.address.number}}<br />
+                    {{shippingData.address.city}} - {{shippingData.address.state}}<br />
+                    {{shippingData.address.postalCode}}<br />
+                    {{shippingData.address.country}}
+                  </p>
+                </td>
+                <td style="
                         width: 50%;
                         vertical-align: top;
                         border: 1px solid #d3c9c0;
                         border-radius: 15px;
                         padding: 15px;
-                      "
-                    >
-                      <h3
-                        style="
+                      ">
+                  <h3 style="
                           margin: 0;
                           font-size: 15px;
                           font-weight: bold;
                           text-align: center;
-                        "
-                      >
-                        Forma de pagamento
-                      </h3>
-                      <p
-                        style="
+                        ">
+                    Forma de pagamento
+                  </h3>
+                  <p style="
                           margin: 5px 0;
                           font-size: 12px;
                           text-align: center;
-                        "
-                      >
-                        <!--  -->
+                        ">
+                    <!--  -->
 
-                        <p style="margin: 5px 0; font-size: 12px; text-align: center;">
-                          {{#with paymentData.transactions.[0].payments.[0]}}
-                          {{paymentSystemName}} {{#if lastDigits}} final {{lastDigits}} {{/if}}<br />
-                          R$ {{formatCurrency value}} 
-                          {{#eq group "instantPayment"}}
-                          via Pix
-                          {{else}}
-                          {{#eq installments 1}}
-                           à vista
-                           {{else}}
-                          parcelado em {{installments}}x
-                           {{/eq}}
-                          {{/eq}}
-                        {{/with}}
-                        </p>
-                      </p>
+                  <p style="margin: 5px 0; font-size: 12px; text-align: center;">
+                    {{#with paymentData.transactions.[0].payments.[0]}}
+                    {{paymentSystemName}} {{#if lastDigits}} final {{lastDigits}} {{/if}}<br />
+                    R$ {{formatCurrency value}}
+                    {{#eq group "instantPayment"}}
+                    via Pix
+                    {{else}}
+                    {{#eq installments 1}}
+                    à vista
+                    {{else}}
+                    parcelado em {{installments}}x
+                    {{/eq}}
+                    {{/eq}}
+                    {{/with}}
+                  </p>
+                  </p>
+                </td>
+                {{/each}}
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <!-- Produtos do pedido -->
+        {{#each orders}}
+        <td style="padding: 0 79px 20px 79px; font-family: 'Montserrat', arial, sans-serif;">
+          <table width="100%" border="0" cellpadding="10" cellspacing="0"
+            style="border: 1px solid #d3c9c0; border-radius: 15px; border-spacing: 30px 10px">
+            {{#each items}}
+            <tr>
+              <td style="width: 96px; height: 128px; vertical-align: top">
+                <img src="{{imageUrl}}" alt="{{name}}" width="96" height="128"
+                  style="border-radius: 8px; display: block; object-fit: cover;" />
+              </td>
+              <td style="vertical-align: top">
+                <span style="font-size: 14px; display: block; overflow-wrap: break-word; width:350px;line-height: 1.2;">
+                  {{name}}
+                </span>
+                <br />
+                <span style="font-size: 14px; font-weight: bold">
+                  {{#if sellingPrice}}
+                  R$ {{formatCurrency sellingPrice}}
+                  {{else}}
+                  Grátis
+                  {{/if}}
+                </span>
+                <br />
+                <br />
+                <span style="font-size: 10px">
+                  Tamanho: {{skuName}}
+                </span>
+                <br />
+                <span style="font-size: 10px">
+                  {{quantity}} {{#eq quantity 1}} unidade {{else}} unidades {{/eq}}
+                </span>
+              </td>
+            </tr>
+            {{/each}}
+
+            <tr>
+              <td colspan="2" style="padding: 10px 0 0 0; text-align: center;">
+                <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center">
+                  <tr>
+                    <td style="width: 24px; vertical-align: middle; text-align: center;">
+                      <img src="https://hopelingerie.vteximg.com.br/arquivos/ids/269945/embalagem-presente.png" alt=""
+                        width="24" height="24" style="display: block; margin: 0 auto;">
                     </td>
-                    {{/each}}
+                    <td
+                      style="padding-left: 8px; font-size: 10px; line-height: 1.4; vertical-align: middle; text-align: left;">
+                      Embalagem para presente adicionado
+                    </td>
                   </tr>
                 </table>
               </td>
             </tr>
-            <!-- Produtos do pedido -->
-            {{#each orders}}
-              <td style="padding: 0 79px 20px 79px; font-family: 'Montserrat', arial, sans-serif;">
-                <table
-                  width="100%"
-                  border="0"
-                  cellpadding="10"
-                  cellspacing="0"
-                  style="border: 1px solid #d3c9c0; border-radius: 15px; border-spacing: 30px 10px"
-                >
-                  {{#each items}}
-                  <tr>
-                    <td style="width: 96px; height: 128px; vertical-align: top">
-                      <img
-                        src="{{imageUrl}}"
-                        alt="{{name}}"
-                        style="border-radius: 8px; display: block; object-fit: cover; width: 96px; height: 128px"
-                      />
-                    </td>
-                    <td style="vertical-align: top">
-                      <span style="font-size: 14px; display: block; overflow-wrap: break-word; width:350px;line-height: 1.2;">
-                        {{name}}
-                      </span>
-                      <br />
-                      <span style="font-size: 14px; font-weight: bold">
-                        {{#if sellingPrice}}
-                          R$ {{formatCurrency sellingPrice}}
-                        {{else}}
-                          Grátis
-                        {{/if}}
-                      </span>
-                      <br />
-                      <br />
-                      <span style="font-size: 10px">
-                        Tamanho: {{skuName}}
-                      </span>
-                      <br />
-                      <span style="font-size: 10px">
-                          {{quantity}} {{#eq quantity 1}} unidade {{else}} unidades {{/eq}}
-                        </span>
-                    </td>
-                  </tr>
-                  <!-- <tr>
-                    <td>
-                      <a href="/" style="">
-                        <img src="https://hopelingerie.vtexassets.com/assets/vtex.file-manager-graphql/images/e8a94a0c-da64-4f96-aafd-18ed023a9eaf___82228bfdfc4c1e11a8fea0cccc850b04.png" alt="" style="display:inline-block; width: 18px; height: 18px;">
-                        Embalagem para presente adicionado
-                      </a>
-                    </td>
-                  </tr> -->
-                  {{/each}}
-                </table>
-              </td>
-              {{/each}}
-              {{#each orders}}
-              <tr>
-                <td style="padding: 0px 160px; text-align: center; font-size: 16px">
-                  
-                  <table width="100%" border="0" cellpadding="8" cellspacing="0">
-                    {{#each totals}}
-                      {{#if value}}
-                        <tr style="box-sizing: border-box !important">
-                          <td style="border-bottom: 1px solid #d3c9c0; font-size: 13px; line-height: 20px; box-sizing: border-box; border-collapse: collapse; text-align: left; font-family:  'Montserrat', arial, sans-serif; " align="left">
-                            {{#eq id "Items"}}Subtotal{{/eq}}
-                            {{#eq id "Shipping"}}Entrega{{/eq}}
-                            {{#eq id "Discounts"}}Descontos{{/eq}}
-                            {{#eq id "Tax"}}Taxas{{/eq}}
-                          </td>
-                          <td style="border-bottom: 1px solid #d3c9c0; font-size: 13px; line-height: 20px; box-sizing: border-box; border-collapse: collapse; text-align: right; font-family: 'Montserrat', arial, sans-serif;" align="right">
-                            R$ {{formatCurrency value}}
-                          </td>
-                        </tr>
-                      {{/if}}
-                    {{/each}}
-                    <tr style="box-sizing: border-box !important">
-                      <td style="font-size: 16px; line-height: 20px; box-sizing: border-box; border-collapse: collapse; text-align: left; font-weight: 500; padding-top: 0.25rem; padding-bottom: 0.25rem !important; font-family: 'Montserrat', arial, sans-serif; color: #000000;" align="left">
-                        Total
-                      </td>
-                      <td style="font-size: 16px; line-height: 20px; box-sizing: border-box; border-collapse: collapse; font-weight: bold; text-align: right; font-family:  'Montserrat', arial, sans-serif; color: #000000;" align="right">
-                        R$ {{formatCurrency value}}
-                      </td>
-                    </tr>
-                  </table>
+          </table>
+        </td>
+        {{/each}}
+        {{#each orders}}
+        <tr>
+          <td style=" padding: 0px 160px; text-align: center; font-size: 16px">
+
+            <table width="100%" border="0" cellpadding="8" cellspacing="0">
+              {{#each totals}}
+              {{#if value}}
+              <tr style="box-sizing: border-box !important">
+                <td
+                  style="border-bottom: 1px solid #d3c9c0; font-size: 13px; line-height: 20px; box-sizing: border-box; border-collapse: collapse; text-align: left; font-family:  'Montserrat', arial, sans-serif; "
+                  align="left">
+                  {{#eq id "Items"}}Subtotal{{/eq}}
+                  {{#eq id "Shipping"}}Entrega{{/eq}}
+                  {{#eq id "Discounts"}}Descontos{{/eq}}
+                  {{#eq id "Tax"}}Taxas{{/eq}}
+                </td>
+                <td
+                  style="border-bottom: 1px solid #d3c9c0; font-size: 13px; line-height: 20px; box-sizing: border-box; border-collapse: collapse; text-align: right; font-family: 'Montserrat', arial, sans-serif;"
+                  align="right">
+                  R$ {{formatCurrency value}}
                 </td>
               </tr>
+              {{/if}}
               {{/each}}
-            <tr>
-              <td align="center">
-                <table
-                  role="presentation"
-                  width="100%"
-                  align="center"
-                  style="
+              <tr style="box-sizing: border-box !important">
+                <td
+                  style="font-size: 16px; line-height: 20px; box-sizing: border-box; border-collapse: collapse; text-align: left; font-weight: 500; padding-top: 0.25rem; padding-bottom: 0.25rem !important; font-family: 'Montserrat', arial, sans-serif; color: #1E130D;"
+                  align="left">
+                  Total
+                </td>
+                <td
+                  style="font-size: 16px; line-height: 20px; box-sizing: border-box; border-collapse: collapse; font-weight: bold; text-align: right; font-family:  'Montserrat', arial, sans-serif; color: #1E130D;"
+                  align="right">
+                  R$ {{formatCurrency value}}
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        {{/each}}
+        <tr>
+          <td align="center">
+            <table role="presentation" width="100%" align="center" style="
                     max-width: 536px;
                     background-color: #d2c9c0;
                     border-radius: 15px;
                     padding: 15px;
                     margin: 20px auto;
-                  "
-                >
-                  <tr>
-                    <td align="center">
-                      <img
-                        src="https://hopelingerie.vtexassets.com/assets/vtex.file-manager-graphql/images/cabb9cbe-44b3-4584-aba8-595d130b6851___22ff4c070e41ad86dfc895df5b63f4c6.png"
-                        alt=""
-                        style="
+                  ">
+              <tr>
+                <td align="center">
+                  <img
+                    src="https://hopelingerie.vtexassets.com/assets/vtex.file-manager-graphql/images/cabb9cbe-44b3-4584-aba8-595d130b6851___22ff4c070e41ad86dfc895df5b63f4c6.png"
+                    alt="" style="
                           max-width: 50px;
                           display: block;
                           margin: 0 auto 10px;
                           
-                        "
-                      />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td
-                      align="center"
-                      style="font-size: 18px; font-family: 'Montserrat', arial, sans-serif;"
-                    >
-                      Você ganhou 
-                      <strong>15% de cashback!</strong>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td
-                      align="center"
-                      style="font-size: 14px; padding: 10px 15px 30px 15px; line-height: 1.5; font-family: 'Montserrat', arial, sans-serif;"
-                    >
-                      Disponível para ser usado na sua próxima compra.<br />
-                      Te enviaremos um SMS com todas as informações<br />
-                      sobre como resgatar. Aproveite!
-                    </td>
-                  </tr>
-                  <tr>
-                    <td align="center">
-                      <a
-                        href="https://www.hopelingerie.com.br/cashback?utm_source=VTEX&utm_medium=EMKT&utm_campaign=regua_email_transacional_HOPE"
-                        style="
-                          color: #000;
+                        " />
+                </td>
+              </tr>
+              <tr>
+                <td align="center" style="font-size: 18px; font-family: 'Montserrat', arial, sans-serif;">
+                  Você ganhou
+                  <strong>15% de cashback!</strong>
+                </td>
+              </tr>
+              <tr>
+                <td align="center"
+                  style="font-size: 14px; padding: 10px 15px 30px 15px; line-height: 1.5; font-family: 'Montserrat', arial, sans-serif;">
+                  Disponível para ser usado na sua próxima compra.<br />
+                  Te enviaremos um SMS com todas as informações<br />
+                  sobre como resgatar. Aproveite!
+                </td>
+              </tr>
+              <tr>
+                <td align="center">
+                  <a href="https://www.hopelingerie.com.br/cashback?utm_source=VTEX&utm_medium=EMKT&utm_campaign=regua_email_transacional_HOPE"
+                    style="
+                          color: #1E130D;
                           text-decoration: underline;
                           font-size: 14px;
                           font-family: 'Montserrat', arial, sans-serif;
-                        "
-                        >Confira as regras</a
-                      >
-                    </td>
-                  </tr>
-                </table>
-              </td>
-            </tr>
+                        ">Confira as regras</a>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
 
-            <!-- Categorias principais -->
-            <tr>
-              <td align="center" style="padding-top: 20px; background-color: #fff; font-family: 'Montserrat', arial, sans-serif;">
-                <h2 style="margin: 10px 0; font-size: 16px; font-family: 'Montserrat', arial, sans-serif;">
-                  COMPRE AGORA NAS PRINCIPAIS CATEGORIAS
-                </h2>
-                <table border="0" cellpadding="10" cellspacing="0" width="100%" style="padding: 0 50px 15px 50px;">
-                  <tr>
-                    <td align="center">
-                      <a
-                      target="_blank"
-                        href="https://www.hopelingerie.com.br/calcinhas?utm_source=VTEX&utm_medium=EMKT&utm_campaign=regua_email_transacional_HOPE"
-                        style="
-                          display: inline-block;
-                          font-size: 13.5px;
-                          width: 279px;
-                          background-color: #000;
-                          color: #fff;
-                          padding: 15px 0;
-                          border-radius: 5px;
-                          text-decoration: none;
-                          font-weight: 600;
-                          letter-spacing: 1px;
-                        "
-                        >CALCINHAS</a
-                      >
-                    </td>
-                    <td align="center">
-                      <a
-                      target="_blank"
-                        href="https://www.hopelingerie.com.br/sutias?utm_source=VTEX&utm_medium=EMKT&utm_campaign=regua_email_transacional_HOPE"
-                        style="
-                          display: inline-block;
-                          font-size: 13.5px;
-                          width: 279px;
-                          background-color: #000;
-                          color: #fff;
-                          padding: 15px 0;
-                          border-radius: 5px;
-                          text-decoration: none;
-                          font-weight: 600;
-                          letter-spacing: 1px;
-                        "
-                        >SUTIÃS</a
-                      >
-                    </td>
-                  </tr>
-                  <tr>
-                    <td align="center">
-                      <a
-                      target="_blank"
-                        href="https://www.hopelingerie.com.br/pijamas?utm_source=VTEX&utm_medium=EMKT&utm_campaign=regua_email_transacional_HOPE"
-                        style="
-                          display: inline-block;
-                          font-size: 13.5px;
-                          width: 279px;
-                          background-color: #000;
-                          color: #fff;
-                          padding: 15px 0;
-                          border-radius: 5px;
-                          text-decoration: none;
-                          font-weight: 600;
-                          letter-spacing: 1px;
-                        "
-                        >PIJAMAS</a
-                      >
-                    </td>
-                    <td align="center">
-                      <a
-                      target="_blank"
-                        href="https://www.hopelingerie.com.br/todo-site?utm_source=VTEX&utm_medium=EMKT&utm_campaign=regua_email_transacional_HOPE"
-                        style="
-                          display: inline-block;
-                          font-size: 13.5px;
-                          width: 279px;
-                          background-color: #000;
-                          color: #fff;
-                          padding: 15px 0;
-                          border-radius: 5px;
-                          text-decoration: none;
-                          font-weight: 600;
-                          letter-spacing: 1px;
-                        "
-                        >NOVIDADES</a
-                      >
-                    </td>
-                  </tr>
-                </table>
-              </td>
-            </tr>
-            <!-- Bloco de Imagens em Grade -->
-            <table border="0" cellpadding="0" cellspacing="0" height="140" width="735.8" style="background-color: #EFEDEA;">
-											  <tbody>
-												 <tr>
-													
-													<td height="140" width="635" style="padding: 15px 0px; margin: 0px auto;">
-													   <table align="center" border="0" cellpadding="0" cellspacing="0" height="140" style="padding: 24px 0; border-top: none; height: 100px; width: 500px; margin: 0px auto;" valign="top" width="635">
-														  <tbody>
-															 <tr>
-																<td style="text-align: center; color: #575756; font-size:11px; width: 180px;">
-																   <a href="https://www.hopelingerie.com.br/encontre-uma-loja" target="_blank"><img border="0" src="http://hopeweb.com.br/newsletters/news_2024/07_Julho/00-New-Header-Footer-2024/nossas-lojas.png" style="display:inline-block; padding-bottom: 0px; width: 27px; height: 30px;"></a><br><p style="height: 10px; width: 10px; margin: 0px auto;"></p>
-																   <a href="https://www.hopelingerie.com.br/encontre-uma-loja" style="color: #000; text-decoration: none; font-family: 'Montserrat', arial, sans-serif;" target="_blank"><strong>NOSSAS LOJAS</strong><br>
-																	  Encontre uma loja</a>                                             
-																</td>
-																<td style="text-align: center; color: #575756; font-size:11px; width: 180px;">
-																   <a href="https://www.hopelingerie.com.br/cashback" target="_blank"><img border="0" src="http://hopeweb.com.br/newsletters/news_2024/07_Julho/00-New-Header-Footer-2024/15-cashback.png" style="display:inline-block; padding-bottom: 0px; width: 36px; height: 31px;"></a><br><p style="height: 10px; width: 10px; margin: 0px auto;"></p>
-																   <a href="https://www.hopelingerie.com.br/cashback" style="color: #000; text-decoration: none; width: 50px; font-family: 'Montserrat', arial, sans-serif;" target="_blank"><strong>15% DE CASHBACK</strong><br>
-																	  Use na próxima compra</a>                                             
-																</td>
-																<td style="text-align: center; color: #575756; font-size:11px; width: 180px;">
-																   <a href="https://www.hopelingerie.com.br/duvidas-frequentes" target="_blank"><img border="0" src="http://hopeweb.com.br/newsletters/news_2024/07_Julho/00-New-Header-Footer-2024/entrega-expressa.png" style="display:inline-block; padding-bottom: 0px; width: 36; height: 29px;"></a><br><p style="height: 10px; width: 10px; margin: 0px auto;"></p>
-																   <a href="https://www.hopelingerie.com.br/duvidas-frequentes" style="color: #000; text-decoration: none; font-family: 'Montserrat', arial, sans-serif;" target="_blank"><strong>ENTREGA EXPRESSA</strong><br>
-																	  Receba em até 24h</a>                                             
-																</td>
-															 </tr>
-														  </tbody>
-													   </table>
-													   <table align="center" border="0" cellpadding="0" cellspacing="0" height="140" style="padding: 24px 0; border-top: none; height: 100px; width: 500px; margin: 0px auto;" valign="top" width="635">
-														  <tbody>
-															 <tr>
-																<td style="text-align: center; color: #575756; font-size:11px; width: 180px;">
-																   <a href="https://api.whatsapp.com/send?phone=5511945107491" target="_blank"><img border="0" src="http://hopeweb.com.br/newsletters/news_2024/07_Julho/00-New-Header-Footer-2024/whatsapp.png" style="display:inline-block; padding-bottom: 0px; width: 30px; height: 30px;"></a><br><p style="height: 10px; width: 10px; margin: 0px auto;"></p>
-																   <a href="https://api.whatsapp.com/send?phone=5511945107491" style="color: #000; text-decoration: none; font-family: 'Montserrat', arial, sans-serif;" target="_blank"><strong>COMPRE ONLINE</strong><br>
-																	  Via Whatsapp</a>                                             
-																</td>
-																<td style="text-align: center; color: #575756; font-size:11px; width: 180px;">
-																   <a href="https://hopelingerie.com.br/" target="_blank"><img border="0" src="http://hopeweb.com.br/newsletters/news_2024/07_Julho/00-New-Header-Footer-2024/frete.png" style="display:inline-block; padding-bottom: 0px; width: 38px; height: 27px;"></a><br><p style="height: 10px; width: 10px; margin: 0px auto;"></p>
-																   <a href="https://hopelingerie.com.br/" style="color: #000; text-decoration: none; width: 50px; font-family: 'Montserrat', arial, sans-serif;" target="_blank"><strong>FRETE GRÁTIS</strong><br>
-																	  Acima de R$ 249*</a>                                             
-																</td>
-																<td style="text-align: center; color: #575756; font-size:11px; width: 180px;">
-																   <a href="https://hopelingerie.troquefacil.com.br/" target="_blank"><img border="0" src="http://hopeweb.com.br/newsletters/news_2024/07_Julho/00-New-Header-Footer-2024/troque.png" style="display:inline-block; padding-bottom: 0px; width: 39px; height: 28px;"></a><br><p style="height: 10px; width: 10px; margin: 0px auto;"></p>
-																   <a href="https://hopelingerie.troquefacil.com.br/" style="color: #000; text-decoration: none; font-family: 'Montserrat', arial, sans-serif;" target="_blank"><strong>TROQUE FÁCIL</strong><br>
-																	  Simples e rápido</a>                                             
-																</td>
-															 </tr>
-														  </tbody>
-													   </table>
-													</td>                           
-													
-													<td height="146px" width="35px">
-													   <a href="https://franquias.grupohope.com.br/seja-um-franqueado/" target="_blank">
-														  <img style="width: 35px; height: 146px" border="0" src="http://hopeweb.com.br/newsletters/news_2024/07_Julho/00-New-Header-Footer-2024/franqueado.png">
-													   </a>
-													</td>                          
-												 </tr>
-												  
-											  </tbody>
-										   </table>
-
-            <!-- Rodapé - Redes Sociais -->
-            <table align="center" bgcolor="#000" border="0" cellpadding="0" cellspacing="0" height="104" valign="middle" width="735.8" style="background: #000000;">
-											  <tbody>
-												 <tr height="104">
-													<td height="104" width="20">&nbsp;</td>
-													<td height="104" width="133"><a href="https://www.hopelingerie.com.br/" target="_blank"><img border="0" src="http://hopeweb.com.br/newsletters/news_2024/07_Julho/00-New-Header-Footer-2024/Logo-light.png" style="display:inline-block;" width="98"></a></td>
-													<td height="75" style="text-align: center; color: #FFFFFF; font-size:12px; " width="20"><a href="https://www.facebook.com/FaceDaHOPE" target="_blank" title="Facebook"><img border="0" src="http://hopeweb.com.br/newsletters/news_2024/07_Julho/00-New-Header-Footer-2024/facebook.png" style="display:inline-block; width: 14px; height: 25px;" width="11"></a></td>
-													<td height="75" style="text-align: center; color: #FFFFFF; font-size:12px; " width="20"><a href="https://www.instagram.com/hope.oficial/" target="_blank" title="Instagram"><img border="0" src="http://hopeweb.com.br/newsletters/news_2024/07_Julho/00-New-Header-Footer-2024/instagram.png" style="display:inline-block; width: 25px; height: 25px;" width="19.5"></a></td>
-													<td height="75" style="text-align: center; color: #000000; font-size:12px; " width="20"><a href="https://www.linkedin.com/company/grupohope/mycompany/" target="_blank" title="Linkedin"><img border="0" src="http://hopeweb.com.br/newsletters/news_2024/07_Julho/00-New-Header-Footer-2024/linkedin.png" style="display:inline-block; width: 25px; height: 25px;" width="19.5"></a></td>
-													<td height="75" style="text-align: center; color: #000000; font-size:12px; " width="20"><a href="https://www.tiktok.com/@hope.oficial" target="_blank" title="TikTok"><img border="0" src="http://hopeweb.com.br/newsletters/news_2024/07_Julho/00-New-Header-Footer-2024/tiktok.png" style="display:inline-block; width: 23px; height: 25px;" width="19.5"></a></td>
-													<td height="104" width="15">&nbsp;</td>
-												 </tr>
-											  </tbody>
-										   </table>
-
-            <!-- footer -->
-                <table align="center" bgcolor="#FFFFFF" style="background: #ffffff;" border="0" cellpadding="0" cellspacing="0" width="735.8">
-                  <tbody>
-                  <tr>					
-                    <td
-                    align="center"
+        <!-- Categorias principais -->
+        <tr>
+          <td align="center"
+            style="padding-top: 20px; background-color: #fff; font-family: 'Montserrat', arial, sans-serif;">
+            <h2 style="margin: 10px 0; font-size: 16px; font-family: 'Montserrat', arial, sans-serif;">
+              COMPRE AGORA NAS PRINCIPAIS CATEGORIAS
+            </h2>
+            <table border="0" cellpadding="10" cellspacing="0" width="100%" style="padding: 0 50px 15px 50px;">
+              <tr>
+                <td align="center">
+                  <a target="_blank"
+                    href="https://www.hopelingerie.com.br/calcinhas?utm_source=VTEX&utm_medium=EMKT&utm_campaign=regua_email_transacional_HOPE"
                     style="
+                          display: inline-block;
+                          font-size: 13.5px;
+                          width: 279px;
+                          background-color: #1E130D;
+                          color: #fff;
+                          padding: 15px 0;
+                          border-radius: 5px;
+                          text-decoration: none;
+                          font-weight: 600;
+                          letter-spacing: 1px;
+                        ">CALCINHAS</a>
+                </td>
+                <td align="center">
+                  <a target="_blank"
+                    href="https://www.hopelingerie.com.br/sutias?utm_source=VTEX&utm_medium=EMKT&utm_campaign=regua_email_transacional_HOPE"
+                    style="
+                          display: inline-block;
+                          font-size: 13.5px;
+                          width: 279px;
+                          background-color: #1E130D;
+                          color: #fff;
+                          padding: 15px 0;
+                          border-radius: 5px;
+                          text-decoration: none;
+                          font-weight: 600;
+                          letter-spacing: 1px;
+                        ">SUTIÃS</a>
+                </td>
+              </tr>
+              <tr>
+                <td align="center">
+                  <a target="_blank"
+                    href="https://www.hopelingerie.com.br/pijamas?utm_source=VTEX&utm_medium=EMKT&utm_campaign=regua_email_transacional_HOPE"
+                    style="
+                          display: inline-block;
+                          font-size: 13.5px;
+                          width: 279px;
+                          background-color: #1E130D;
+                          color: #fff;
+                          padding: 15px 0;
+                          border-radius: 5px;
+                          text-decoration: none;
+                          font-weight: 600;
+                          letter-spacing: 1px;
+                        ">PIJAMAS</a>
+                </td>
+                <td align="center">
+                  <a target="_blank"
+                    href="https://www.hopelingerie.com.br/todo-site?utm_source=VTEX&utm_medium=EMKT&utm_campaign=regua_email_transacional_HOPE"
+                    style="
+                          display: inline-block;
+                          font-size: 13.5px;
+                          width: 279px;
+                          background-color: #1E130D;
+                          color: #fff;
+                          padding: 15px 0;
+                          border-radius: 5px;
+                          text-decoration: none;
+                          font-weight: 600;
+                          letter-spacing: 1px;
+                        ">NOVIDADES</a>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <!-- Bloco de Imagens em Grade -->
+        <table border="0" cellpadding="0" cellspacing="0" height="140" width="735" style="background-color: #EFEDEA;">
+          <tbody>
+            <tr>
+
+              <td height="140" width="700" style="padding: 15px 0px; margin: 0px auto;">
+                <table align="center" border="0" cellpadding="0" cellspacing="0" height="140"
+                  style="padding: 24px 0; border-top: none; height: 100px; width: 500px; margin: 0px auto;" valign="top"
+                  width="635">
+                  <tbody>
+                    <tr>
+                      <td style="text-align: center; color: #575756; font-size:11px; width: 180px;">
+                        <a href="https://www.hopelingerie.com.br/encontre-uma-loja" target="_blank"><img border="0"
+                            src="http://hopeweb.com.br/newsletters/news_2024/07_Julho/00-New-Header-Footer-2024/nossas-lojas.png"
+                            style="display:inline-block; padding-bottom: 0px; width: 27px; height: 30px;"></a><br>
+                        <p style="height: 10px; width: 10px; margin: 0px auto;"></p>
+                        <a href="https://www.hopelingerie.com.br/encontre-uma-loja"
+                          style="color: #1E130D; text-decoration: none; font-family: 'Montserrat', arial, sans-serif;"
+                          target="_blank"><strong>NOSSAS LOJAS</strong><br>
+                          Encontre uma loja</a>
+                      </td>
+                      <td style="text-align: center; color: #575756; font-size:11px; width: 180px;">
+                        <a href="https://www.hopelingerie.com.br/cashback" target="_blank"><img border="0"
+                            src="http://hopeweb.com.br/newsletters/news_2024/07_Julho/00-New-Header-Footer-2024/15-cashback.png"
+                            style="display:inline-block; padding-bottom: 0px; width: 36px; height: 31px;"></a><br>
+                        <p style="height: 10px; width: 10px; margin: 0px auto;"></p>
+                        <a href="https://www.hopelingerie.com.br/cashback"
+                          style="color: #1E130D; text-decoration: none; width: 50px; font-family: 'Montserrat', arial, sans-serif;"
+                          target="_blank"><strong>15% DE CASHBACK</strong><br>
+                          Use na próxima compra</a>
+                      </td>
+                      <td style="text-align: center; color: #575756; font-size:11px; width: 180px;">
+                        <a href="https://www.hopelingerie.com.br/duvidas-frequentes" target="_blank"><img border="0"
+                            src="http://hopeweb.com.br/newsletters/news_2024/07_Julho/00-New-Header-Footer-2024/entrega-expressa.png"
+                            style="display:inline-block; padding-bottom: 0px; width: 36; height: 29px;"></a><br>
+                        <p style="height: 10px; width: 10px; margin: 0px auto;"></p>
+                        <a href="https://www.hopelingerie.com.br/duvidas-frequentes"
+                          style="color: #1E130D; text-decoration: none; font-family: 'Montserrat', arial, sans-serif;"
+                          target="_blank"><strong>ENTREGA EXPRESSA</strong><br>
+                          Receba em até 24h</a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table align="center" border="0" cellpadding="0" cellspacing="0" height="140"
+                  style="padding: 24px 0; border-top: none; height: 100px; width: 500px; margin: 0px auto;" valign="top"
+                  width="635">
+                  <tbody>
+                    <tr>
+                      <td style="text-align: center; color: #575756; font-size:11px; width: 180px;">
+                        <a href="https://api.whatsapp.com/send?phone=5511945107491" target="_blank"><img border="0"
+                            src="http://hopeweb.com.br/newsletters/news_2024/07_Julho/00-New-Header-Footer-2024/whatsapp.png"
+                            style="display:inline-block; padding-bottom: 0px; width: 30px; height: 30px;"></a><br>
+                        <p style="height: 10px; width: 10px; margin: 0px auto;"></p>
+                        <a href="https://api.whatsapp.com/send?phone=5511945107491"
+                          style="color: #1E130D; text-decoration: none; font-family: 'Montserrat', arial, sans-serif;"
+                          target="_blank"><strong>COMPRE ONLINE</strong><br>
+                          Via Whatsapp</a>
+                      </td>
+                      <td style="text-align: center; color: #575756; font-size:11px; width: 180px;">
+                        <a href="https://hopelingerie.com.br/" target="_blank"><img border="0"
+                            src="http://hopeweb.com.br/newsletters/news_2024/07_Julho/00-New-Header-Footer-2024/frete.png"
+                            style="display:inline-block; padding-bottom: 0px; width: 38px; height: 27px;"></a><br>
+                        <p style="height: 10px; width: 10px; margin: 0px auto;"></p>
+                        <a href="https://hopelingerie.com.br/"
+                          style="color: #1E130D; text-decoration: none; width: 50px; font-family: 'Montserrat', arial, sans-serif;"
+                          target="_blank"><strong>FRETE GRÁTIS</strong><br>
+                          Acima de R$ 249*</a>
+                      </td>
+                      <td style="text-align: center; color: #575756; font-size:11px; width: 180px;">
+                        <a href="https://hopelingerie.troquefacil.com.br/" target="_blank"><img border="0"
+                            src="http://hopeweb.com.br/newsletters/news_2024/07_Julho/00-New-Header-Footer-2024/troque.png"
+                            style="display:inline-block; padding-bottom: 0px; width: 39px; height: 28px;"></a><br>
+                        <p style="height: 10px; width: 10px; margin: 0px auto;"></p>
+                        <a href="https://hopelingerie.troquefacil.com.br/"
+                          style="color: #1E130D; text-decoration: none; font-family: 'Montserrat', arial, sans-serif;"
+                          target="_blank"><strong>TROQUE FÁCIL</strong><br>
+                          Simples e rápido</a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+
+              <td height="146px" width="35px">
+                <a href="https://franquias.grupohope.com.br/seja-um-franqueado/" target="_blank">
+                  <img style="width: 35px; height: 146px" border="0"
+                    src="http://hopeweb.com.br/newsletters/news_2024/07_Julho/00-New-Header-Footer-2024/franqueado.png">
+                </a>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+
+        <!-- Rodapé - Redes Sociais -->
+        <table align="center" bgcolor="#1E130D" border="0" cellpadding="0" cellspacing="0" height="104" valign="middle"
+          width="735" style="background: #000000;">
+          <tbody>
+            <tr height="104">
+              <td height="104" width="20">&nbsp;</td>
+              <td height="104" width="133"><a href="https://www.hopelingerie.com.br/" target="_blank"><img border="0"
+                    src="http://hopeweb.com.br/newsletters/news_2024/07_Julho/00-New-Header-Footer-2024/Logo-light.png"
+                    style="display:inline-block;" width="98"></a></td>
+              <td height="75" style="text-align: center; color: #FFFFFF; font-size:12px; " width="20"><a
+                  href="https://www.facebook.com/FaceDaHOPE" target="_blank" title="Facebook"><img border="0"
+                    src="http://hopeweb.com.br/newsletters/news_2024/07_Julho/00-New-Header-Footer-2024/facebook.png"
+                    style="display:inline-block; width: 14px; height: 25px;" width="11"></a></td>
+              <td height="75" style="text-align: center; color: #FFFFFF; font-size:12px; " width="20"><a
+                  href="https://www.instagram.com/hope.oficial/" target="_blank" title="Instagram"><img border="0"
+                    src="http://hopeweb.com.br/newsletters/news_2024/07_Julho/00-New-Header-Footer-2024/instagram.png"
+                    style="display:inline-block; width: 25px; height: 25px;" width="19.5"></a></td>
+              <td height="75" style="text-align: center; color: #1E130D; font-size:12px; " width="20"><a
+                  href="https://www.linkedin.com/company/grupohope/mycompany/" target="_blank" title="Linkedin"><img
+                    border="0"
+                    src="http://hopeweb.com.br/newsletters/news_2024/07_Julho/00-New-Header-Footer-2024/linkedin.png"
+                    style="display:inline-block; width: 25px; height: 25px;" width="19.5"></a></td>
+              <td height="75" style="text-align: center; color: #1E130D; font-size:12px; " width="20"><a
+                  href="https://www.tiktok.com/@hope.oficial" target="_blank" title="TikTok"><img border="0"
+                    src="http://hopeweb.com.br/newsletters/news_2024/07_Julho/00-New-Header-Footer-2024/tiktok.png"
+                    style="display:inline-block; width: 23px; height: 25px;" width="19.5"></a></td>
+              <td height="104" width="15">&nbsp;</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- footer -->
+        <table align="center" bgcolor="#FFFFFF" style="background: #ffffff;" border="0" cellpadding="0" cellspacing="0"
+          width="735">
+          <tbody>
+            <tr>
+              <td align="center" style="
                       padding: 20px;
                       font-size: 14px;
-                      color: #000;
+                      color: #1E130D;
                       background-color: #fff;
                       font-size: 9px;
                       letter-spacing: 0.4px;
                       font-family: 'Montserrat', arial, sans-serif;
-                    "
-                  >
+                    ">
 
-                    <p style="margin: 5px 0 ">
-                      Para ver condições de pagamento, entrega, regras e promoções
-                      <a
-                        href="https://www.hopelingerie.com.br/regras-e-promocoes?utm_source=VTEX&utm_medium=EMKT&utm_campaign=regua_email_transacional_HOPE"
-                        style="
-                          color: #000;
+                <p style="margin: 5px 0 ">
+                  Para ver condições de pagamento, entrega, regras e promoções
+                  <a href="https://www.hopelingerie.com.br/regras-e-promocoes?utm_source=VTEX&utm_medium=EMKT&utm_campaign=regua_email_transacional_HOPE"
+                    style="
+                          color: #1E130D;
                           font-weight: bold;
                           text-decoration: none;
-                        "
-                        >acesse aqui</a
-                      >
-                    </p>
+                        ">acesse aqui</a>
+                </p>
 
-                    <p style="margin: 15px 0 5px 0;">
-                      SAC HOPE LINGERIE
-                    </p>
-                    <p style="margin: 5px 0">CNPJ: 03.007.414/0001-30</p>
-                    <p style="margin: 5px 0">
-                      E-mail:
-                      <a
-                        href="mailto:sac@hopelingerie.com.br"
-                        style="color: #000;"
-                        >sac@hopelingerie.com.br</a
-                      >
-                    </p>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </table>
-        </td>
-      </tr>
-    </table>
-  </body>
+                <p style="margin: 15px 0 5px 0;">
+                  SAC HOPE LINGERIE
+                </p>
+                <p style="margin: 5px 0">CNPJ: 03.007.414/0001-30</p>
+                <p style="margin: 5px 0">
+                  E-mail:
+                  <a href="mailto:sac@hopelingerie.com.br" style="color: #1E130D;">sac@hopelingerie.com.br</a>
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </table>
+    </td>
+    </tr>
+  </table>
+</body>
+
 </html>
