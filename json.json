@@ -1,0 +1,610 @@
+{
+  "package": null,
+  "subjectItemAttachment": {
+    "item": "Notebook Acer Nitro ...",
+    "totalItems": 2,
+    "extraItems": 1
+  },
+  "cancellationReason": null,
+  "paymentData": {
+    "giftCards": [],
+    "transactions": [
+      {
+        "isActive": true,
+        "transactionId": "BF09957422A743EBB877CC0DB6378F78",
+        "merchantName": "I***************",
+        "payments": [
+          {
+            "id": "D6EDCEE4C009455ABC23371EE75F1C74",
+            "paymentSystem": "4",
+            "paymentSystemName": "M*********",
+            "value": 719900,
+            "installments": 1,
+            "referenceValue": 719900,
+            "cardHolder": null,
+            "cardNumber": null,
+            "firstDigits": "511366",
+            "lastDigits": "3231",
+            "cvv2": null,
+            "expireMonth": null,
+            "expireYear": null,
+            "url": null,
+            "giftCardId": null,
+            "giftCardName": null,
+            "giftCardCaption": null,
+            "redemptionCode": null,
+            "group": "creditCard",
+            "tid": null,
+            "dueDate": null,
+            "connectorResponses": {},
+            "giftCardProvider": null,
+            "giftCardAsDiscount": null,
+            "koinUrl": null,
+            "accountId": "89CA94565DAB4DB3805D70691BA1B111",
+            "parentAccountId": "89CA94565DAB4DB3805D70691BA1B111",
+            "bankIssuedInvoiceIdentificationNumber": null,
+            "bankIssuedInvoiceIdentificationNumberFormatted": null,
+            "bankIssuedInvoiceBarCodeNumber": null,
+            "bankIssuedInvoiceBarCodeType": null,
+            "billingAddress": {
+              "postalCode": "2****-4**",
+              "city": "V**** R******",
+              "state": "RJ",
+              "country": "BRA",
+              "street": "R** J*** M*****",
+              "number": "1**",
+              "neighborhood": "P**** A***",
+              "complement": null,
+              "reference": null,
+              "geoCoordinates": [-51.4779552, -0.0039779]
+            },
+            "paymentOrigin": null
+          }
+        ]
+      }
+    ]
+  },
+  "cancellationRequests": null,
+  "invoiceData": null,
+  "clientProfileData": {
+    "id": "clientProfileData",
+    "email": "e*******************************@c*.v***.c**.b*",
+    "firstName": "M****",
+    "lastName": "G****",
+    "documentType": "cpf",
+    "document": "1**********",
+    "phone": "+5************",
+    "corporateName": null,
+    "tradeName": null,
+    "corporateDocument": null,
+    "stateInscription": null,
+    "corporatePhone": null,
+    "isCorporate": false,
+    "userProfileId": "5758d208-200f-4b6e-a64f-d3b753765ad7",
+    "userProfileVersion": null,
+    "customerClass": null,
+    "customerCode": null
+  },
+  "shippingData": {
+    "id": "shippingData",
+    "address": {
+      "addressType": "residential",
+      "receiverName": "M**** G****",
+      "addressId": "5242221514923",
+      "versionId": null,
+      "entityId": null,
+      "postalCode": "2****-4**",
+      "city": "V**** R******",
+      "state": "RJ",
+      "country": "BRA",
+      "street": "R** J*** M*****",
+      "number": "1**",
+      "neighborhood": "P**** A***",
+      "complement": null,
+      "reference": null,
+      "geoCoordinates": [-51.4779552, -0.0039779]
+    },
+    "logisticsInfo": [
+      {
+        "itemIndex": 0,
+        "itemId": "3",
+        "selectedDeliveryChannel": "delivery",
+        "selectedSla": "frete-a-combinar",
+        "lockTTL": "12d",
+        "price": 0,
+        "listPrice": 0,
+        "sellingPrice": 0,
+        "deliveryWindow": null,
+        "deliveryCompany": null,
+        "shippingEstimate": "8bd",
+        "shippingEstimateDate": null,
+        "slas": [
+          {
+            "id": "frete-a-combinar",
+            "name": "f***************",
+            "shippingEstimate": "8bd",
+            "shippingEstimateDate": null,
+            "deliveryWindow": null,
+            "availableDeliveryWindows": [],
+            "deliveryIds": [
+              {
+                "courierId": "1",
+                "courierName": "F***************",
+                "dockId": "1",
+                "quantity": 1,
+                "warehouseId": "1_1",
+                "accountCarrierName": "i***************",
+                "kitItemDetails": []
+              }
+            ],
+            "listPrice": 0,
+            "price": 0,
+            "deliveryChannel": "delivery",
+            "pickupStoreInfo": {
+              "additionalInfo": null,
+              "address": null,
+              "dockId": null,
+              "friendlyName": null,
+              "isPickupStore": false
+            },
+            "polygonName": "",
+            "lockTTL": "12d",
+            "pickupPointId": null,
+            "transitTime": "8bd",
+            "pickupDistance": 0
+          }
+        ],
+        "shipsTo": ["BRA"],
+        "deliveryIds": [
+          {
+            "courierId": "1",
+            "courierName": "F***************",
+            "dockId": "1",
+            "quantity": 1,
+            "warehouseId": "1_1",
+            "accountCarrierName": "i***************",
+            "kitItemDetails": []
+          }
+        ],
+        "deliveryChannels": [
+          {
+            "id": "delivery",
+            "stockBalance": 0
+          }
+        ],
+        "deliveryChannel": null,
+        "pickupStoreInfo": {
+          "additionalInfo": null,
+          "address": null,
+          "dockId": null,
+          "friendlyName": null,
+          "isPickupStore": false
+        },
+        "addressId": "5242221514923",
+        "versionId": null,
+        "entityId": null,
+        "polygonName": "",
+        "pickupPointId": null,
+        "transitTime": "8bd"
+      },
+      {
+        "itemIndex": 1,
+        "itemId": "4",
+        "selectedDeliveryChannel": "delivery",
+        "selectedSla": "frete-a-combinar",
+        "lockTTL": "12d",
+        "price": 0,
+        "listPrice": 0,
+        "sellingPrice": 0,
+        "deliveryWindow": null,
+        "deliveryCompany": null,
+        "shippingEstimate": "8bd",
+        "shippingEstimateDate": null,
+        "slas": [
+          {
+            "id": "frete-a-combinar",
+            "name": "f***************",
+            "shippingEstimate": "8bd",
+            "shippingEstimateDate": null,
+            "deliveryWindow": null,
+            "availableDeliveryWindows": [],
+            "deliveryIds": [
+              {
+                "courierId": "1",
+                "courierName": "F***************",
+                "dockId": "1",
+                "quantity": 1,
+                "warehouseId": "1_1",
+                "accountCarrierName": "i***************",
+                "kitItemDetails": []
+              }
+            ],
+            "listPrice": 0,
+            "price": 0,
+            "deliveryChannel": "delivery",
+            "pickupStoreInfo": {
+              "additionalInfo": null,
+              "address": null,
+              "dockId": null,
+              "friendlyName": null,
+              "isPickupStore": false
+            },
+            "polygonName": "",
+            "lockTTL": "12d",
+            "pickupPointId": null,
+            "transitTime": "8bd",
+            "pickupDistance": 0
+          }
+        ],
+        "shipsTo": ["BRA"],
+        "deliveryIds": [
+          {
+            "courierId": "1",
+            "courierName": "F***************",
+            "dockId": "1",
+            "quantity": 1,
+            "warehouseId": "1_1",
+            "accountCarrierName": "i***************",
+            "kitItemDetails": []
+          }
+        ],
+        "deliveryChannels": [
+          {
+            "id": "delivery",
+            "stockBalance": 0
+          }
+        ],
+        "deliveryChannel": null,
+        "pickupStoreInfo": {
+          "additionalInfo": null,
+          "address": null,
+          "dockId": null,
+          "friendlyName": null,
+          "isPickupStore": false
+        },
+        "addressId": "5242221514923",
+        "versionId": null,
+        "entityId": null,
+        "polygonName": "",
+        "pickupPointId": null,
+        "transitTime": "8bd"
+      }
+    ],
+    "trackingHints": [],
+    "selectedAddresses": [
+      {
+        "addressId": "5242221514923",
+        "versionId": null,
+        "entityId": null,
+        "addressType": "residential",
+        "receiverName": "M**** G****",
+        "street": "R** J*** M*****",
+        "number": "1**",
+        "complement": null,
+        "neighborhood": "P**** A***",
+        "postalCode": "2****-4**",
+        "city": "V**** R******",
+        "state": "RJ",
+        "country": "BRA",
+        "reference": null,
+        "geoCoordinates": [-51.4779552, -0.0039779]
+      }
+    ],
+    "availableAddresses": [
+      {
+        "addressId": "5242221514923",
+        "versionId": null,
+        "entityId": null,
+        "addressType": "residential",
+        "receiverName": "M**** G****",
+        "street": "R** J*** M*****",
+        "number": "1**",
+        "complement": null,
+        "neighborhood": "P**** A***",
+        "postalCode": "2****-4**",
+        "city": "V**** R******",
+        "state": "RJ",
+        "country": "BRA",
+        "reference": null,
+        "geoCoordinates": [-51.4779552, -0.0039779]
+      }
+    ],
+    "contactInformation": []
+  },
+  "customData": null,
+  "purchaseAgentData": null,
+  "items": [
+    {
+      "additionalInfo": {
+        "categoriesIds": "/1/",
+        "productClusterId": "",
+        "commercialConditionId": "1",
+        "dimension": {
+          "cubicweight": 1,
+          "height": 10,
+          "length": 25,
+          "weight": 2000,
+          "width": 50
+        },
+        "brandName": "L*****",
+        "brandId": "2000001",
+        "offeringInfo": null,
+        "offeringType": null,
+        "offeringTypeId": null
+      },
+      "sellerSku": "3",
+      "priceTable": null,
+      "priceValidUntil": "2026-05-30T19:04:26Z",
+      "callCenterOperator": null,
+      "commission": 0,
+      "freightCommission": 0,
+      "taxCode": "",
+      "catalogProvider": "vrn:vtex.catalog-api-proxy:-:inovakipartnerbr:master:/proxy/authenticated/catalog/pvt/sku/stockkeepingunitbyid/3",
+      "uniqueId": "DD5B5818F09644B7A34574761F56F88F",
+      "id": "3",
+      "productId": "2",
+      "productRefId": "",
+      "refId": "07899469702203",
+      "ean": "07899469702203",
+      "name": "N*******************************************************************************************************************",
+      "skuName": "N**********************",
+      "modalType": null,
+      "parentItemIndex": null,
+      "parentAssemblyBinding": null,
+      "assemblies": [],
+      "tax": 0,
+      "price": 300000,
+      "listPrice": 300000,
+      "manualPrice": null,
+      "manualPriceAppliedBy": null,
+      "sellingPrice": 300000,
+      "rewardValue": 0,
+      "isGift": false,
+      "preSaleDate": "2024-03-17T00:00:00",
+      "productCategoryIds": "/1/",
+      "productCategories": {
+        "1": "Informática"
+      },
+      "quantity": 1,
+      "seller": "1",
+      "sellerChain": ["1"],
+      "imageUrl": "https://inovakipartnerbr.vteximg.com.br/arquivos/ids/155407-150-150/Notebook-Lenovo-Ideapad-1i-I5-1235u-8GB-512GB-SSD-Windows-Home-15-6-Polegadas-82VY000QBR_1718974871_gg.jpg?v=638549229283300000",
+      "detailUrl": "/ideapad/p",
+      "components": [],
+      "bundleItems": [],
+      "attachments": [],
+      "attachmentOfferings": [],
+      "offerings": [],
+      "priceTags": [],
+      "availability": "available",
+      "measurementUnit": "un",
+      "unitMultiplier": 1,
+      "manufacturerCode": null,
+      "priceDefinition": {
+        "calculatedSellingPrice": 300000,
+        "total": 300000,
+        "sellingPrices": [
+          {
+            "value": 300000,
+            "quantity": 1
+          }
+        ]
+      }
+    },
+    {
+      "additionalInfo": {
+        "categoriesIds": "/1/",
+        "productClusterId": "",
+        "commercialConditionId": "1",
+        "dimension": {
+          "cubicweight": 1,
+          "height": 40,
+          "length": 3,
+          "weight": 5,
+          "width": 35
+        },
+        "brandName": "A***",
+        "brandId": "2000002",
+        "offeringInfo": null,
+        "offeringType": null,
+        "offeringTypeId": null
+      },
+      "sellerSku": "4",
+      "priceTable": null,
+      "priceValidUntil": "2026-05-30T19:04:26Z",
+      "callCenterOperator": null,
+      "commission": 0,
+      "freightCommission": 0,
+      "taxCode": "321241513f",
+      "catalogProvider": "vrn:vtex.catalog-api-proxy:-:inovakipartnerbr:master:/proxy/authenticated/catalog/pvt/sku/stockkeepingunitbyid/4",
+      "uniqueId": "A093E1F50FDC4D369988BFEF619631CA",
+      "id": "4",
+      "productId": "4",
+      "productRefId": "321241513f",
+      "refId": "12124125",
+      "ean": "12315134",
+      "name": "N***************************************",
+      "skuName": "N*******************",
+      "modalType": null,
+      "parentItemIndex": null,
+      "parentAssemblyBinding": null,
+      "assemblies": [],
+      "tax": 0,
+      "price": 419900,
+      "listPrice": 419900,
+      "manualPrice": null,
+      "manualPriceAppliedBy": null,
+      "sellingPrice": 419900,
+      "rewardValue": 0,
+      "isGift": false,
+      "preSaleDate": "2024-06-20T00:00:00",
+      "productCategoryIds": "/1/",
+      "productCategories": {
+        "1": "Informática"
+      },
+      "quantity": 1,
+      "seller": "1",
+      "sellerChain": ["1"],
+      "imageUrl": "https://inovakipartnerbr.vteximg.com.br/arquivos/ids/155404-150-150/Notebook-Gamer-Acer-Nitro-V15-Intel-Core-i5-13-gen-8GB-RAM-NVIDIA-RTX3050-SSD-512GB-Tela-15-6-Polegadas-Full-HD-Linux-Anv15-51-57ws_1717617849_gg.jpg?v=638549228096700000",
+      "detailUrl": "/notebook/p",
+      "components": [],
+      "bundleItems": [],
+      "attachments": [],
+      "attachmentOfferings": [],
+      "offerings": [],
+      "priceTags": [],
+      "availability": "available",
+      "measurementUnit": "un",
+      "unitMultiplier": 1,
+      "manufacturerCode": null,
+      "priceDefinition": {
+        "calculatedSellingPrice": 419900,
+        "total": 419900,
+        "sellingPrices": [
+          {
+            "value": 419900,
+            "quantity": 1
+          }
+        ]
+      }
+    }
+  ],
+  "sellers": [
+    {
+      "subSellerId": "1",
+      "fulfillmentEndpoint": "http://fulfillment.vtexcommerce.com.br/api/fulfillment?an=inovakipartnerbr",
+      "id": "1",
+      "name": "I***********",
+      "logo": ""
+    }
+  ],
+  "giftRegistryData": null,
+  "receiptData": null,
+  "contextData": null,
+  "marketPlaceOrderId": "",
+  "marketPlaceOrderGroup": null,
+  "marketplaceServicesEndpoint": null,
+  "orderFormId": "423b04fe0bb44cffb504385e8593111a",
+  "sequence": "500039",
+  "affiliateId": "",
+  "status": "",
+  "callCenterOperator": "",
+  "userProfileId": "5758d208-200f-4b6e-a64f-d3b753765ad7",
+  "hostName": "i***************",
+  "creationVersion": null,
+  "creationEnvironment": null,
+  "lastChangeVersion": null,
+  "workflowInstanceId": null,
+  "marketplacePaymentValue": null,
+  "orderId": "1535950500039-01",
+  "orderGroup": "1535950500039",
+  "state": "canceled",
+  "isCheckedIn": false,
+  "sellerOrderId": "00-1535950500039-01",
+  "storeId": null,
+  "checkedInPickupPointId": null,
+  "value": 719900,
+  "totals": [
+    {
+      "id": "Items",
+      "name": "T**************",
+      "value": 719900
+    },
+    {
+      "id": "Discounts",
+      "name": "T******************",
+      "value": 0
+    },
+    {
+      "id": "Shipping",
+      "name": "T*************",
+      "value": 0
+    },
+    {
+      "id": "Tax",
+      "name": "T************",
+      "value": 0
+    }
+  ],
+  "ratesAndBenefitsData": {
+    "rateAndBenefitsIdentifiers": [],
+    "teaser": []
+  },
+  "clientPreferencesData": {
+    "locale": "pt-BR",
+    "optinNewsLetter": false
+  },
+  "commercialConditionData": null,
+  "marketingData": null,
+  "storePreferencesData": {
+    "countryCode": "BRA",
+    "saveUserData": false,
+    "timeZone": "E. South America Standard Time",
+    "currencyCode": "BRL",
+    "currencyLocale": 1046,
+    "currencySymbol": "R$",
+    "currencyFormatInfo": {
+      "currencyDecimalDigits": 2,
+      "currencyDecimalSeparator": ",",
+      "currencyGroupSeparator": ".",
+      "currencyGroupSize": 3,
+      "startsWithCurrencySymbol": true
+    }
+  },
+  "openTextField": null,
+  "itemMetadata": null,
+  "taxData": null,
+  "hooksData": null,
+  "changeData": null,
+  "subscriptionData": null,
+  "salesChannel": "1",
+  "followUpEmail": "3**********************************.v***.c**.b*",
+  "creationDate": "2025-05-30T19:05:00.3915892Z",
+  "lastChange": "2025-06-02T16:07:34.7098547Z",
+  "timeZoneCreationDate": "2025-05-30T16:05:00.3915892",
+  "timeZoneLastChange": "2025-06-02T13:07:34.7098547",
+  "isCompleted": true,
+  "merchantName": null,
+  "userType": "",
+  "roundingError": 0,
+  "allowEdition": false,
+  "allowCancellation": false,
+  "isUserDataVisible": false,
+  "allowChangeSeller": false,
+  "cancellationData": {
+    "requestedByUser": false,
+    "requestedByPaymentNotification": true,
+    "reason": null,
+    "cancellationDate": "2025-06-02T16:07:30.3279234Z"
+  },
+  "_accountInfo": {
+    "MainAccountName": "i***************",
+    "AccountName": "i***************",
+    "Cnpj": null,
+    "Id": "cbf303a1-9388-4a42-8b01-7510f2b226de",
+    "AppId": null,
+    "IsActive": true,
+    "IsOperating": false,
+    "CreationDate": "2024-01-26T15:24:34.8938636Z",
+    "OperationDate": null,
+    "CompanyName": "I*********************************************",
+    "TradingName": "I***********",
+    "City": null,
+    "Complement": null,
+    "Country": null,
+    "State": null,
+    "Address": null,
+    "District": null,
+    "Number": null,
+    "PostalCode": null,
+    "Licenses": [7],
+    "ParentAccountId": null,
+    "ParentAccountName": null,
+    "InactivationDate": null,
+    "Platform": "vtex",
+    "Privacy": null,
+    "HasPiiRestriction": false,
+    "Infra": null,
+    "Sponsor": "5758d208-200f-4b6e-a64f-d3b753765ad7"
+  }
+}
