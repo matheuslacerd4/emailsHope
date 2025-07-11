@@ -160,12 +160,13 @@
                           font-family: 'Montserrat', Arial, sans-serif;
                         "
                       >
-                        {{pickupStoreInfo.Address}},
-                        {{pickupStoreInfo.address}}<br />
-                        {{pickupStoreInfo.address}} -
-                        {{pickupStoreInfo.address}}<br />
-                        {{pickupStoreInfo.address}}<br />
-                        {{pickupStoreInfo.address}}
+                        {{shippingData.logisticsInfo.[0].pickupStoreInfo.address.street}},
+                        {{shippingData.logisticsInfo.[0].pickupStoreInfo.address.number}}<br />
+                        {{shippingData.logisticsInfo.[0].pickupStoreInfo.address.city}}
+                        -
+                        {{shippingData.logisticsInfo.[0].pickupStoreInfo.address.state}}<br />
+                        {{shippingData.logisticsInfo.[0].pickupStoreInfo.address.postalCode}}<br />
+                        {{shippingData.logisticsInfo.[0].pickupStoreInfo.address.country}}
                       </p>
                     </td>
                   </tr>
